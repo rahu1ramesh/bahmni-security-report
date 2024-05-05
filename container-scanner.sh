@@ -50,7 +50,6 @@ fi
 
 echo "Generating scan report...."
 
-trivy image python:3.4-alpine  --scanners vuln --severity HIGH,CRITICAL --format template --template "@html.tpl" --output "$ROOT_DIR/${DIR}/python-latest.html"
 # Iterate through each image and run Trivy scan
 for image in $REPO_LIST; do
     # Check if the image is in the ignored list
@@ -69,7 +68,7 @@ for image in $REPO_LIST; do
     # Run Trivy scan on the image
     echo "Scanning image: $image"
     output_file_txt="$ROOT_DIR/${DIR}/${image}-latest.html"
-    trivy image "${ORG}/$image_name:latest" --scanners vuln --severity HIGH,CRITICAL --format template --template "@html.tpl" --output "$output_file_txt"
+    trivy image "${ORG}/$image_name:latest" --scanners vuln --format template --template "@html.tpl" --output "$output_file_txt"
     echo "" >> "$output_file_txt"
 
     # Check if Trivy scan was successful
