@@ -68,7 +68,7 @@ for image in $REPO_LIST; do
     # Run Trivy scan on the image
     echo "Scanning image: $image"
     output_file_txt="$ROOT_DIR/${DIR}/${image}-latest.html"
-    trivy image --severity HIGH,CRITICAL --scanners vuln --format template --template "@html.tpl" --output "$output_file_txt" "${ORG}/$image_name"
+    trivy image --severity HIGH,CRITICAL --format template --template "@html.tpl" --output "$output_file_txt" "${ORG}/$image_name"
     echo "" >> "$output_file_txt"
 
     # Check if Trivy scan was successful
