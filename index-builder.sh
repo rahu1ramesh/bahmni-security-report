@@ -4,7 +4,7 @@
 DIR="container-scanner-reports/bahmni-latest"
 
 # Define the output HTML file
-OUTPUT_FILE="container-scanner-reports/container-reports.html"
+OUTPUT_FILE="container-scanner-reports/index.html"
 
 # Define CSS styles for the table
 CSS_STYLES=$(cat <<'EOF'
