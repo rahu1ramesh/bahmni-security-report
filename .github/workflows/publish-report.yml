@@ -1,0 +1,46 @@
+name: Deploy static content to Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set Script Execute Permission
+        run: |
+          chmod +x clean-up.sh
+          chmod +x container-scanner.sh
+          chmod +x index-builder.sh
+      - name: Clean Older Files
+        run: |
+          ./clean-up.sh
+      - name: Scan Images In Bahmni Namespace
+        run: |
+          ./container-scanner.sh
+      - name: Build Index Page
+        run: |
+          ./index-builder.sh
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './container-scanner-reports/bahmni-latest/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
