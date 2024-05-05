@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy Scan Report to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -14,10 +14,10 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,6 +35,17 @@ jobs:
       - name: Build Index Page
         run: |
           ./index-builder.sh
+      - name: Commit and push changes
+        id: auto-commit-action
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Rahul] | Add. Scan Report"
+          branch: ${{ github.ref }}
+          file_pattern: '*.html'
+          repository: .
+          commit_user_name: Rahul Ramesh
+          commit_user_email: rahul.ramesh@thoughtworks.com
+          commit_author: rahu1ramesh <rahul.ramesh@thoughtworks.com>
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
