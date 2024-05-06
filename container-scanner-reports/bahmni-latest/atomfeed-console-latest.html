@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/atomfeed-console (alpine 3.9.4)</title>
+    <script>
+      window.onload = function() {
+        document.querySelectorAll('td.links').forEach(function(linkCell) {
+          var links = [].concat.apply([], linkCell.querySelectorAll('a'));
+          [].sort.apply(links, function(a, b) {
+            return a.href > b.href ? 1 : -1;
+          });
+          links.forEach(function(link, idx) {
+            if (links.length > 3 && 3 === idx) {
+              var toggleLink = document.createElement('a');
+              toggleLink.innerText = "Toggle more links";
+              toggleLink.href = "#toggleMore";
+              toggleLink.setAttribute("class", "toggle-more-links");
+              linkCell.appendChild(toggleLink);
+            }
+            linkCell.appendChild(link);
+          });
+        });
+        document.querySelectorAll('a.toggle-more-links').forEach(function(toggleLink) {
+          toggleLink.onclick = function() {
+            var expanded = toggleLink.parentElement.getAttribute("data-more-links");
+            toggleLink.parentElement.setAttribute("data-more-links", "on" === expanded ? "off" : "on");
+            return false;
+          };
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>bahmni/atomfeed-console (alpine 3.9.4)</h1>
+    <table>
+      <tr class="group-header"><th colspan="6">alpine</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+        <th>Links</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">krb5-libs</td>
+        <td>CVE-2020-28196</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.15.5-r0</td>
+        <td>1.15.5-r1</td>
+        <td class="links" data-more-links="off">
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28196">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28196</a>
+          <a href="https://github.com/krb5/krb5/commit/57415dda6cf04e73ffc3723be518eddfae599bfd">https://github.com/krb5/krb5/commit/57415dda6cf04e73ffc3723be518eddfae599bfd</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-28196.html">https://linux.oracle.com/cve/CVE-2020-28196.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-9294.html">https://linux.oracle.com/errata/ELSA-2021-9294.html</a>
+          <a href="https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/11/msg00011.html">https://lists.debian.org/debian-lts-announce/2020/11/msg00011.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/45KKOZQWIIIW5C45PJVGQ32AXBSYNBE7/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/45KKOZQWIIIW5C45PJVGQ32AXBSYNBE7/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/73IGOG6CZAVMVNS4GGRMOLOZ7B6QVA7F/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/73IGOG6CZAVMVNS4GGRMOLOZ7B6QVA7F/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KPH2V3WSQTELROZK3GFCPQDOFLKIZ6H5/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KPH2V3WSQTELROZK3GFCPQDOFLKIZ6H5/</a>
+          <a href="https://security.gentoo.org/glsa/202011-17">https://security.gentoo.org/glsa/202011-17</a>
+          <a href="https://security.netapp.com/advisory/ntap-20201202-0001/">https://security.netapp.com/advisory/ntap-20201202-0001/</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210513-0002/">https://security.netapp.com/advisory/ntap-20210513-0002/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4635-1">https://ubuntu.com/security/notices/USN-4635-1</a>
+          <a href="https://www.debian.org/security/2020/dsa-4795">https://www.debian.org/security/2020/dsa-4795</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2022.html">https://www.oracle.com/security-alerts/cpuapr2022.html</a>
+        </td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libbz2</td>
+        <td>CVE-2019-12900</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.0.6-r6</td>
+        <td>1.0.6-r7</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00040.html">http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00040.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00050.html">http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00050.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00078.html">http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00078.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00000.html</a>
+          <a href="http://packetstormsecurity.com/files/153644/Slackware-Security-Advisory-bzip2-Updates.html">http://packetstormsecurity.com/files/153644/Slackware-Security-Advisory-bzip2-Updates.html</a>
+          <a href="http://packetstormsecurity.com/files/153957/FreeBSD-Security-Advisory-FreeBSD-SA-19-18.bzip2.html">http://packetstormsecurity.com/files/153957/FreeBSD-Security-Advisory-FreeBSD-SA-19-18.bzip2.html</a>
+          <a href="https://bugs.launchpad.net/ubuntu/+source/bzip2/+bug/1834494">https://bugs.launchpad.net/ubuntu/+source/bzip2/+bug/1834494</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12900">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12900</a>
+          <a href="https://gitlab.com/federicomenaquintero/bzip2/commit/74de1e2e6ffc9d51ef9824db71a8ffee5962cdbc">https://gitlab.com/federicomenaquintero/bzip2/commit/74de1e2e6ffc9d51ef9824db71a8ffee5962cdbc</a>
+          <a href="https://lists.apache.org/thread.html/ra0adb9653c7de9539b93cc8434143b655f753b9f60580ff260becb2b@%3Cusers.kafka.apache.org%3E">https://lists.apache.org/thread.html/ra0adb9653c7de9539b93cc8434143b655f753b9f60580ff260becb2b@%3Cusers.kafka.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/rce8cd8c30f60604b580ea01bebda8a671a25c9a1629f409fc24e7774@%3Cuser.flink.apache.org%3E">https://lists.apache.org/thread.html/rce8cd8c30f60604b580ea01bebda8a671a25c9a1629f409fc24e7774@%3Cuser.flink.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/rda98305669476c4d90cc8527c4deda7e449019dd1fe9936b56671dd4@%3Cuser.flink.apache.org%3E">https://lists.apache.org/thread.html/rda98305669476c4d90cc8527c4deda7e449019dd1fe9936b56671dd4@%3Cuser.flink.apache.org%3E</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2019/06/msg00021.html">https://lists.debian.org/debian-lts-announce/2019/06/msg00021.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2019/07/msg00014.html">https://lists.debian.org/debian-lts-announce/2019/07/msg00014.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2019/10/msg00012.html">https://lists.debian.org/debian-lts-announce/2019/10/msg00012.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2019/10/msg00018.html">https://lists.debian.org/debian-lts-announce/2019/10/msg00018.html</a>
+          <a href="https://seclists.org/bugtraq/2019/Aug/4">https://seclists.org/bugtraq/2019/Aug/4</a>
+          <a href="https://seclists.org/bugtraq/2019/Jul/22">https://seclists.org/bugtraq/2019/Jul/22</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-19:18.bzip2.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-19:18.bzip2.asc</a>
+          <a href="https://support.f5.com/csp/article/K68713584?utm_source=f5support&amp;amp;utm_medium=RSS">https://support.f5.com/csp/article/K68713584?utm_source=f5support&amp;amp;utm_medium=RSS</a>
+          <a href="https://ubuntu.com/security/notices/USN-4038-1">https://ubuntu.com/security/notices/USN-4038-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4038-2">https://ubuntu.com/security/notices/USN-4038-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-4038-3">https://ubuntu.com/security/notices/USN-4038-3</a>
+          <a href="https://ubuntu.com/security/notices/USN-4038-4">https://ubuntu.com/security/notices/USN-4038-4</a>
+          <a href="https://ubuntu.com/security/notices/USN-4146-1">https://ubuntu.com/security/notices/USN-4146-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4146-2">https://ubuntu.com/security/notices/USN-4146-2</a>
+          <a href="https://usn.ubuntu.com/4038-1/">https://usn.ubuntu.com/4038-1/</a>
+          <a href="https://usn.ubuntu.com/4038-2/">https://usn.ubuntu.com/4038-2/</a>
+          <a href="https://usn.ubuntu.com/4146-1/">https://usn.ubuntu.com/4146-1/</a>
+          <a href="https://usn.ubuntu.com/4146-2/">https://usn.ubuntu.com/4146-2/</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2020.html">https://www.oracle.com/security-alerts/cpuoct2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcrypto1.1</td>
+        <td>CVE-2020-1967</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1g-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html">http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html">http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html</a>
+          <a href="http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html">http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html</a>
+          <a href="http://seclists.org/fulldisclosure/2020/May/5">http://seclists.org/fulldisclosure/2020/May/5</a>
+          <a href="http://www.openwall.com/lists/oss-security/2020/04/22/2">http://www.openwall.com/lists/oss-security/2020/04/22/2</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1967">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1967</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=eb563247aef3e83dda7679c43f9649270462e5b1">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=eb563247aef3e83dda7679c43f9649270462e5b1</a>
+          <a href="https://github.com/irsl/CVE-2020-1967">https://github.com/irsl/CVE-2020-1967</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440</a>
+          <a href="https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1967">https://nvd.nist.gov/vuln/detail/CVE-2020-1967</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc</a>
+          <a href="https://security.gentoo.org/glsa/202004-10">https://security.gentoo.org/glsa/202004-10</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200424-0003/">https://security.netapp.com/advisory/ntap-20200424-0003/</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0004/">https://security.netapp.com/advisory/ntap-20200717-0004/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4661">https://www.debian.org/security/2020/dsa-4661</a>
+          <a href="https://www.openssl.org/news/secadv/20200421.txt">https://www.openssl.org/news/secadv/20200421.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2021.html">https://www.oracle.com/security-alerts/cpujan2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2020.html">https://www.oracle.com/security-alerts/cpuoct2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.synology.com/security/advisory/Synology_SA_20_05">https://www.synology.com/security/advisory/Synology_SA_20_05</a>
+          <a href="https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL">https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL</a>
+          <a href="https://www.tenable.com/security/tns-2020-03">https://www.tenable.com/security/tns-2020-03</a>
+          <a href="https://www.tenable.com/security/tns-2020-04">https://www.tenable.com/security/tns-2020-04</a>
+          <a href="https://www.tenable.com/security/tns-2020-11">https://www.tenable.com/security/tns-2020-11</a>
+          <a href="https://www.tenable.com/security/tns-2021-10">https://www.tenable.com/security/tns-2021-10</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcrypto1.1</td>
+        <td>CVE-2021-23840</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1j-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23840">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23840</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=6a51b9e1d0cf0bf8515f7201b68fb0a3482b3dc1">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=6a51b9e1d0cf0bf8515f7201b68fb0a3482b3dc1</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9b1129239f3ebb1d1c98ce9ed41d5c9476c47cb2">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9b1129239f3ebb1d1c98ce9ed41d5c9476c47cb2</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44846">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44846</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10366">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10366</a>
+          <a href="https://linux.oracle.com/cve/CVE-2021-23840.html">https://linux.oracle.com/cve/CVE-2021-23840.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-9561.html">https://linux.oracle.com/errata/ELSA-2021-9561.html</a>
+          <a href="https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://security.gentoo.org/glsa/202103-03">https://security.gentoo.org/glsa/202103-03</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210219-0009/">https://security.netapp.com/advisory/ntap-20210219-0009/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4738-1">https://ubuntu.com/security/notices/USN-4738-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-5088-1">https://ubuntu.com/security/notices/USN-5088-1</a>
+          <a href="https://www.debian.org/security/2021/dsa-4855">https://www.debian.org/security/2021/dsa-4855</a>
+          <a href="https://www.openssl.org/news/secadv/20210216.txt">https://www.openssl.org/news/secadv/20210216.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2022.html">https://www.oracle.com/security-alerts/cpuapr2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2022.html">https://www.oracle.com/security-alerts/cpujan2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.tenable.com/security/tns-2021-03">https://www.tenable.com/security/tns-2021-03</a>
+          <a href="https://www.tenable.com/security/tns-2021-09">https://www.tenable.com/security/tns-2021-09</a>
+          <a href="https://www.tenable.com/security/tns-2021-10">https://www.tenable.com/security/tns-2021-10</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcrypto1.1</td>
+        <td>CVE-2021-3450</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1k-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/27/1">http://www.openwall.com/lists/oss-security/2021/03/27/1</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/27/2">http://www.openwall.com/lists/oss-security/2021/03/27/2</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/28/3">http://www.openwall.com/lists/oss-security/2021/03/28/3</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/28/4">http://www.openwall.com/lists/oss-security/2021/03/28/4</a>
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2a40b7bc7b94dd7de897a74571e7024f0cf0d63b">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2a40b7bc7b94dd7de897a74571e7024f0cf0d63b</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10356">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10356</a>
+          <a href="https://linux.oracle.com/cve/CVE-2021-3450.html">https://linux.oracle.com/cve/CVE-2021-3450.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-9151.html">https://linux.oracle.com/errata/ELSA-2021-9151.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/</a>
+          <a href="https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html">https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3450">https://nvd.nist.gov/vuln/detail/CVE-2021-3450</a>
+          <a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013">https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc</a>
+          <a href="https://security.gentoo.org/glsa/202103-03">https://security.gentoo.org/glsa/202103-03</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210326-0006/">https://security.netapp.com/advisory/ntap-20210326-0006/</a>
+          <a href="https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd</a>
+          <a href="https://www.openssl.org/news/secadv/20210325.txt">https://www.openssl.org/news/secadv/20210325.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2022.html">https://www.oracle.com/security-alerts/cpuapr2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2022.html">https://www.oracle.com/security-alerts/cpujul2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.tenable.com/security/tns-2021-05">https://www.tenable.com/security/tns-2021-05</a>
+          <a href="https://www.tenable.com/security/tns-2021-08">https://www.tenable.com/security/tns-2021-08</a>
+          <a href="https://www.tenable.com/security/tns-2021-09">https://www.tenable.com/security/tns-2021-09</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libjpeg-turbo</td>
+        <td>CVE-2019-2201</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.5.3-r4</td>
+        <td>1.5.3-r6</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00047.html">http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00047.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2201">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2201</a>
+          <a href="https://lists.apache.org/thread.html/rc800763a88775ac9abb83b3402bcd0913d41ac65fdfc759af38f2280@%3Ccommits.mxnet.apache.org%3E">https://lists.apache.org/thread.html/rc800763a88775ac9abb83b3402bcd0913d41ac65fdfc759af38f2280@%3Ccommits.mxnet.apache.org%3E</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/05/msg00048.html">https://lists.debian.org/debian-lts-announce/2022/05/msg00048.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Y4QPASQPZO644STRFTLOD35RIRGWWRNI/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Y4QPASQPZO644STRFTLOD35RIRGWWRNI/</a>
+          <a href="https://security.gentoo.org/glsa/202003-23">https://security.gentoo.org/glsa/202003-23</a>
+          <a href="https://source.android.com/security/bulletin/2019-11-01">https://source.android.com/security/bulletin/2019-11-01</a>
+          <a href="https://ubuntu.com/security/notices/USN-4190-1">https://ubuntu.com/security/notices/USN-4190-1</a>
+          <a href="https://usn.ubuntu.com/4190-1/">https://usn.ubuntu.com/4190-1/</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssl1.1</td>
+        <td>CVE-2020-1967</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1g-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html">http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html">http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html</a>
+          <a href="http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html">http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html</a>
+          <a href="http://seclists.org/fulldisclosure/2020/May/5">http://seclists.org/fulldisclosure/2020/May/5</a>
+          <a href="http://www.openwall.com/lists/oss-security/2020/04/22/2">http://www.openwall.com/lists/oss-security/2020/04/22/2</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1967">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1967</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=eb563247aef3e83dda7679c43f9649270462e5b1">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=eb563247aef3e83dda7679c43f9649270462e5b1</a>
+          <a href="https://github.com/irsl/CVE-2020-1967">https://github.com/irsl/CVE-2020-1967</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440</a>
+          <a href="https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E">https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1967">https://nvd.nist.gov/vuln/detail/CVE-2020-1967</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc</a>
+          <a href="https://security.gentoo.org/glsa/202004-10">https://security.gentoo.org/glsa/202004-10</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200424-0003/">https://security.netapp.com/advisory/ntap-20200424-0003/</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0004/">https://security.netapp.com/advisory/ntap-20200717-0004/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4661">https://www.debian.org/security/2020/dsa-4661</a>
+          <a href="https://www.openssl.org/news/secadv/20200421.txt">https://www.openssl.org/news/secadv/20200421.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2021.html">https://www.oracle.com/security-alerts/cpujan2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2020.html">https://www.oracle.com/security-alerts/cpuoct2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.synology.com/security/advisory/Synology_SA_20_05">https://www.synology.com/security/advisory/Synology_SA_20_05</a>
+          <a href="https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL">https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL</a>
+          <a href="https://www.tenable.com/security/tns-2020-03">https://www.tenable.com/security/tns-2020-03</a>
+          <a href="https://www.tenable.com/security/tns-2020-04">https://www.tenable.com/security/tns-2020-04</a>
+          <a href="https://www.tenable.com/security/tns-2020-11">https://www.tenable.com/security/tns-2020-11</a>
+          <a href="https://www.tenable.com/security/tns-2021-10">https://www.tenable.com/security/tns-2021-10</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssl1.1</td>
+        <td>CVE-2021-23840</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1j-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23840">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23840</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=6a51b9e1d0cf0bf8515f7201b68fb0a3482b3dc1">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=6a51b9e1d0cf0bf8515f7201b68fb0a3482b3dc1</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9b1129239f3ebb1d1c98ce9ed41d5c9476c47cb2">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9b1129239f3ebb1d1c98ce9ed41d5c9476c47cb2</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44846">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44846</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10366">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10366</a>
+          <a href="https://linux.oracle.com/cve/CVE-2021-23840.html">https://linux.oracle.com/cve/CVE-2021-23840.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-9561.html">https://linux.oracle.com/errata/ELSA-2021-9561.html</a>
+          <a href="https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E">https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E</a>
+          <a href="https://security.gentoo.org/glsa/202103-03">https://security.gentoo.org/glsa/202103-03</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210219-0009/">https://security.netapp.com/advisory/ntap-20210219-0009/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4738-1">https://ubuntu.com/security/notices/USN-4738-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-5088-1">https://ubuntu.com/security/notices/USN-5088-1</a>
+          <a href="https://www.debian.org/security/2021/dsa-4855">https://www.debian.org/security/2021/dsa-4855</a>
+          <a href="https://www.openssl.org/news/secadv/20210216.txt">https://www.openssl.org/news/secadv/20210216.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2022.html">https://www.oracle.com/security-alerts/cpuapr2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2022.html">https://www.oracle.com/security-alerts/cpujan2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.tenable.com/security/tns-2021-03">https://www.tenable.com/security/tns-2021-03</a>
+          <a href="https://www.tenable.com/security/tns-2021-09">https://www.tenable.com/security/tns-2021-09</a>
+          <a href="https://www.tenable.com/security/tns-2021-10">https://www.tenable.com/security/tns-2021-10</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssl1.1</td>
+        <td>CVE-2021-3450</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.1b-r1</td>
+        <td>1.1.1k-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/27/1">http://www.openwall.com/lists/oss-security/2021/03/27/1</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/27/2">http://www.openwall.com/lists/oss-security/2021/03/27/2</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/28/3">http://www.openwall.com/lists/oss-security/2021/03/28/3</a>
+          <a href="http://www.openwall.com/lists/oss-security/2021/03/28/4">http://www.openwall.com/lists/oss-security/2021/03/28/4</a>
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2a40b7bc7b94dd7de897a74571e7024f0cf0d63b">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2a40b7bc7b94dd7de897a74571e7024f0cf0d63b</a>
+          <a href="https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845">https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10356">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10356</a>
+          <a href="https://linux.oracle.com/cve/CVE-2021-3450.html">https://linux.oracle.com/cve/CVE-2021-3450.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-9151.html">https://linux.oracle.com/errata/ELSA-2021-9151.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/</a>
+          <a href="https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html">https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3450">https://nvd.nist.gov/vuln/detail/CVE-2021-3450</a>
+          <a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013">https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc</a>
+          <a href="https://security.gentoo.org/glsa/202103-03">https://security.gentoo.org/glsa/202103-03</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210326-0006/">https://security.netapp.com/advisory/ntap-20210326-0006/</a>
+          <a href="https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd</a>
+          <a href="https://www.openssl.org/news/secadv/20210325.txt">https://www.openssl.org/news/secadv/20210325.txt</a>
+          <a href="https://www.oracle.com//security-alerts/cpujul2021.html">https://www.oracle.com//security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2022.html">https://www.oracle.com/security-alerts/cpuapr2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2022.html">https://www.oracle.com/security-alerts/cpujul2022.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2021.html">https://www.oracle.com/security-alerts/cpuoct2021.html</a>
+          <a href="https://www.tenable.com/security/tns-2021-05">https://www.tenable.com/security/tns-2021-05</a>
+          <a href="https://www.tenable.com/security/tns-2021-08">https://www.tenable.com/security/tns-2021-08</a>
+          <a href="https://www.tenable.com/security/tns-2021-09">https://www.tenable.com/security/tns-2021-09</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libx11</td>
+        <td>CVE-2020-14363</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.7-r0</td>
+        <td>1.6.12-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-14363">https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-14363</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14363">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14363</a>
+          <a href="https://github.com/Ruia-ruia/Exploits/blob/master/DFX11details.txt">https://github.com/Ruia-ruia/Exploits/blob/master/DFX11details.txt</a>
+          <a href="https://github.com/Ruia-ruia/Exploits/blob/master/x11doublefree.sh">https://github.com/Ruia-ruia/Exploits/blob/master/x11doublefree.sh</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14363.html">https://linux.oracle.com/cve/CVE-2020-14363.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2021-1804.html">https://linux.oracle.com/errata/ELSA-2021-1804.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7AVXCQOSCAPKYYHFIJAZ6E2C7LJBTLXF/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7AVXCQOSCAPKYYHFIJAZ6E2C7LJBTLXF/</a>
+          <a href="https://lists.x.org/archives/xorg-announce/2020-August/003056.html">https://lists.x.org/archives/xorg-announce/2020-August/003056.html</a>
+          <a href="https://ubuntu.com/security/notices/USN-4487-1">https://ubuntu.com/security/notices/USN-4487-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4487-2">https://ubuntu.com/security/notices/USN-4487-2</a>
+          <a href="https://usn.ubuntu.com/4487-2/">https://usn.ubuntu.com/4487-2/</a>
+        </td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">musl</td>
+        <td>CVE-2019-14697</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.1.20-r4</td>
+        <td>1.1.20-r5</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2019/08/06/4">http://www.openwall.com/lists/oss-security/2019/08/06/4</a>
+          <a href="https://security.gentoo.org/glsa/202003-13">https://security.gentoo.org/glsa/202003-13</a>
+          <a href="https://www.openwall.com/lists/musl/2019/08/06/1">https://www.openwall.com/lists/musl/2019/08/06/1</a>
+        </td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">musl-utils</td>
+        <td>CVE-2019-14697</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.1.20-r4</td>
+        <td>1.1.20-r5</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2019/08/06/4">http://www.openwall.com/lists/oss-security/2019/08/06/4</a>
+          <a href="https://security.gentoo.org/glsa/202003-13">https://security.gentoo.org/glsa/202003-13</a>
+          <a href="https://www.openwall.com/lists/musl/2019/08/06/1">https://www.openwall.com/lists/musl/2019/08/06/1</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8</td>
+        <td>CVE-2020-14583</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14583.html">https://linux.oracle.com/cve/CVE-2020-14583.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8</td>
+        <td>CVE-2020-14593</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14593.html">https://linux.oracle.com/cve/CVE-2020-14593.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8</td>
+        <td>CVE-2020-2604</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.242.08-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0122">https://access.redhat.com/errata/RHSA-2020:0122</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0128">https://access.redhat.com/errata/RHSA-2020:0128</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0196">https://access.redhat.com/errata/RHSA-2020:0196</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0202">https://access.redhat.com/errata/RHSA-2020:0202</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0231">https://access.redhat.com/errata/RHSA-2020:0231</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0232">https://access.redhat.com/errata/RHSA-2020:0232</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0465">https://access.redhat.com/errata/RHSA-2020:0465</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0467">https://access.redhat.com/errata/RHSA-2020:0467</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0468">https://access.redhat.com/errata/RHSA-2020:0468</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0469">https://access.redhat.com/errata/RHSA-2020:0469</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0470">https://access.redhat.com/errata/RHSA-2020:0470</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0541">https://access.redhat.com/errata/RHSA-2020:0541</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0632">https://access.redhat.com/errata/RHSA-2020:0632</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2604.html">https://linux.oracle.com/cve/CVE-2020-2604.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-0632.html">https://linux.oracle.com/errata/ELSA-2020-0632.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html">https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html</a>
+          <a href="https://seclists.org/bugtraq/2020/Feb/22">https://seclists.org/bugtraq/2020/Feb/22</a>
+          <a href="https://security.gentoo.org/glsa/202101-19">https://security.gentoo.org/glsa/202101-19</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200122-0003/">https://security.netapp.com/advisory/ntap-20200122-0003/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4257-1">https://ubuntu.com/security/notices/USN-4257-1</a>
+          <a href="https://usn.ubuntu.com/4257-1/">https://usn.ubuntu.com/4257-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4621">https://www.debian.org/security/2020/dsa-4621</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2020.html">https://www.oracle.com/security-alerts/cpujan2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2021.html">https://www.oracle.com/security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html">https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html">https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html">https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251">https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8</td>
+        <td>CVE-2020-2803</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2803.html">https://linux.oracle.com/cve/CVE-2020-2803.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8</td>
+        <td>CVE-2020-2805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2805.html">https://linux.oracle.com/cve/CVE-2020-2805.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre</td>
+        <td>CVE-2020-14583</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14583.html">https://linux.oracle.com/cve/CVE-2020-14583.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre</td>
+        <td>CVE-2020-14593</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14593.html">https://linux.oracle.com/cve/CVE-2020-14593.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre</td>
+        <td>CVE-2020-2604</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.242.08-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0122">https://access.redhat.com/errata/RHSA-2020:0122</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0128">https://access.redhat.com/errata/RHSA-2020:0128</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0196">https://access.redhat.com/errata/RHSA-2020:0196</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0202">https://access.redhat.com/errata/RHSA-2020:0202</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0231">https://access.redhat.com/errata/RHSA-2020:0231</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0232">https://access.redhat.com/errata/RHSA-2020:0232</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0465">https://access.redhat.com/errata/RHSA-2020:0465</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0467">https://access.redhat.com/errata/RHSA-2020:0467</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0468">https://access.redhat.com/errata/RHSA-2020:0468</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0469">https://access.redhat.com/errata/RHSA-2020:0469</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0470">https://access.redhat.com/errata/RHSA-2020:0470</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0541">https://access.redhat.com/errata/RHSA-2020:0541</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0632">https://access.redhat.com/errata/RHSA-2020:0632</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2604.html">https://linux.oracle.com/cve/CVE-2020-2604.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-0632.html">https://linux.oracle.com/errata/ELSA-2020-0632.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html">https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html</a>
+          <a href="https://seclists.org/bugtraq/2020/Feb/22">https://seclists.org/bugtraq/2020/Feb/22</a>
+          <a href="https://security.gentoo.org/glsa/202101-19">https://security.gentoo.org/glsa/202101-19</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200122-0003/">https://security.netapp.com/advisory/ntap-20200122-0003/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4257-1">https://ubuntu.com/security/notices/USN-4257-1</a>
+          <a href="https://usn.ubuntu.com/4257-1/">https://usn.ubuntu.com/4257-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4621">https://www.debian.org/security/2020/dsa-4621</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2020.html">https://www.oracle.com/security-alerts/cpujan2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2021.html">https://www.oracle.com/security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html">https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html">https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html">https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251">https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre</td>
+        <td>CVE-2020-2803</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2803.html">https://linux.oracle.com/cve/CVE-2020-2803.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre</td>
+        <td>CVE-2020-2805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2805.html">https://linux.oracle.com/cve/CVE-2020-2805.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-base</td>
+        <td>CVE-2020-14583</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14583.html">https://linux.oracle.com/cve/CVE-2020-14583.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-base</td>
+        <td>CVE-2020-14593</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14593.html">https://linux.oracle.com/cve/CVE-2020-14593.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-base</td>
+        <td>CVE-2020-2604</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.242.08-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0122">https://access.redhat.com/errata/RHSA-2020:0122</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0128">https://access.redhat.com/errata/RHSA-2020:0128</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0196">https://access.redhat.com/errata/RHSA-2020:0196</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0202">https://access.redhat.com/errata/RHSA-2020:0202</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0231">https://access.redhat.com/errata/RHSA-2020:0231</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0232">https://access.redhat.com/errata/RHSA-2020:0232</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0465">https://access.redhat.com/errata/RHSA-2020:0465</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0467">https://access.redhat.com/errata/RHSA-2020:0467</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0468">https://access.redhat.com/errata/RHSA-2020:0468</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0469">https://access.redhat.com/errata/RHSA-2020:0469</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0470">https://access.redhat.com/errata/RHSA-2020:0470</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0541">https://access.redhat.com/errata/RHSA-2020:0541</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0632">https://access.redhat.com/errata/RHSA-2020:0632</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2604.html">https://linux.oracle.com/cve/CVE-2020-2604.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-0632.html">https://linux.oracle.com/errata/ELSA-2020-0632.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html">https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html</a>
+          <a href="https://seclists.org/bugtraq/2020/Feb/22">https://seclists.org/bugtraq/2020/Feb/22</a>
+          <a href="https://security.gentoo.org/glsa/202101-19">https://security.gentoo.org/glsa/202101-19</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200122-0003/">https://security.netapp.com/advisory/ntap-20200122-0003/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4257-1">https://ubuntu.com/security/notices/USN-4257-1</a>
+          <a href="https://usn.ubuntu.com/4257-1/">https://usn.ubuntu.com/4257-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4621">https://www.debian.org/security/2020/dsa-4621</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2020.html">https://www.oracle.com/security-alerts/cpujan2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2021.html">https://www.oracle.com/security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html">https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html">https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html">https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251">https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-base</td>
+        <td>CVE-2020-2803</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2803.html">https://linux.oracle.com/cve/CVE-2020-2803.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-base</td>
+        <td>CVE-2020-2805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2805.html">https://linux.oracle.com/cve/CVE-2020-2805.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-lib</td>
+        <td>CVE-2020-14583</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14583.html">https://linux.oracle.com/cve/CVE-2020-14583.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-lib</td>
+        <td>CVE-2020-14593</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.272.10-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00019.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html">http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00027.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html">http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00041.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-14593.html">https://linux.oracle.com/cve/CVE-2020-14593.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-2985.html">https://linux.oracle.com/errata/ELSA-2020-2985.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00021.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CFJPOYF3CWYEPCDOAOCNFJTQIKKWPHW/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DFZ36XIW5ENQAW6BB7WHRFFTTJX7KGMR/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MEPHBZPNSLX43B26DWKB7OS6AROTS2BO/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QQUMIAON2YEFRONMIUVHAKYCIOLICDBA/</a>
+          <a href="https://security.gentoo.org/glsa/202008-24">https://security.gentoo.org/glsa/202008-24</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200717-0005/">https://security.netapp.com/advisory/ntap-20200717-0005/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4433-1">https://ubuntu.com/security/notices/USN-4433-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4453-1">https://ubuntu.com/security/notices/USN-4453-1</a>
+          <a href="https://usn.ubuntu.com/4433-1/">https://usn.ubuntu.com/4433-1/</a>
+          <a href="https://usn.ubuntu.com/4453-1/">https://usn.ubuntu.com/4453-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4734">https://www.debian.org/security/2020/dsa-4734</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-lib</td>
+        <td>CVE-2020-2604</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.242.08-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00050.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html">http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00060.html</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0122">https://access.redhat.com/errata/RHSA-2020:0122</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0128">https://access.redhat.com/errata/RHSA-2020:0128</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0196">https://access.redhat.com/errata/RHSA-2020:0196</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0202">https://access.redhat.com/errata/RHSA-2020:0202</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0231">https://access.redhat.com/errata/RHSA-2020:0231</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0232">https://access.redhat.com/errata/RHSA-2020:0232</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0465">https://access.redhat.com/errata/RHSA-2020:0465</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0467">https://access.redhat.com/errata/RHSA-2020:0467</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0468">https://access.redhat.com/errata/RHSA-2020:0468</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0469">https://access.redhat.com/errata/RHSA-2020:0469</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0470">https://access.redhat.com/errata/RHSA-2020:0470</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0541">https://access.redhat.com/errata/RHSA-2020:0541</a>
+          <a href="https://access.redhat.com/errata/RHSA-2020:0632">https://access.redhat.com/errata/RHSA-2020:0632</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10315</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2604.html">https://linux.oracle.com/cve/CVE-2020-2604.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-0632.html">https://linux.oracle.com/errata/ELSA-2020-0632.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html">https://lists.debian.org/debian-lts-announce/2020/02/msg00034.html</a>
+          <a href="https://seclists.org/bugtraq/2020/Feb/22">https://seclists.org/bugtraq/2020/Feb/22</a>
+          <a href="https://security.gentoo.org/glsa/202101-19">https://security.gentoo.org/glsa/202101-19</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200122-0003/">https://security.netapp.com/advisory/ntap-20200122-0003/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4257-1">https://ubuntu.com/security/notices/USN-4257-1</a>
+          <a href="https://usn.ubuntu.com/4257-1/">https://usn.ubuntu.com/4257-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4621">https://www.debian.org/security/2020/dsa-4621</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2020.html">https://www.oracle.com/security-alerts/cpujan2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2021.html">https://www.oracle.com/security-alerts/cpujul2021.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html">https://www.oracle.com/technetwork/java/javase/11-0-6-oracle-relnotes-5813175.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html">https://www.oracle.com/technetwork/java/javase/13-0-2-relnotes-5812268.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html">https://www.oracle.com/technetwork/java/javase/8u241-relnotes-5813177.html</a>
+          <a href="https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251">https://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html#R170_251</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-lib</td>
+        <td>CVE-2020-2803</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2803.html">https://linux.oracle.com/cve/CVE-2020-2803.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openjdk8-jre-lib</td>
+        <td>CVE-2020-2805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.212.04-r0</td>
+        <td>8.252.09-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html</a>
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html">http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805</a>
+          <a href="https://linux.oracle.com/cve/CVE-2020-2805.html">https://linux.oracle.com/cve/CVE-2020-2805.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1515.html">https://linux.oracle.com/errata/ELSA-2020-1515.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html">https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/</a>
+          <a href="https://security.gentoo.org/glsa/202006-22">https://security.gentoo.org/glsa/202006-22</a>
+          <a href="https://security.gentoo.org/glsa/202209-15">https://security.gentoo.org/glsa/202209-15</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0004/">https://security.netapp.com/advisory/ntap-20200416-0004/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4337-1">https://ubuntu.com/security/notices/USN-4337-1</a>
+          <a href="https://usn.ubuntu.com/4337-1/">https://usn.ubuntu.com/4337-1/</a>
+          <a href="https://www.debian.org/security/2020/dsa-4662">https://www.debian.org/security/2020/dsa-4662</a>
+          <a href="https://www.debian.org/security/2020/dsa-4668">https://www.debian.org/security/2020/dsa-4668</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">sqlite-libs</td>
+        <td>CVE-2019-8457</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.26.0-r3</td>
+        <td>3.28.0-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00074.html">http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00074.html</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8457">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8457</a>
+          <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10365">https://kc.mcafee.com/corporate/index?page=content&amp;id=SB10365</a>
+          <a href="https://linux.oracle.com/cve/CVE-2019-8457.html">https://linux.oracle.com/cve/CVE-2019-8457.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-1810.html">https://linux.oracle.com/errata/ELSA-2020-1810.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OPKYSWCOM3CL66RI76TYVIG6TJ263RXH/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OPKYSWCOM3CL66RI76TYVIG6TJ263RXH/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJPFGA45DI4F5MCF2OAACGH3HQOF4G3M/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJPFGA45DI4F5MCF2OAACGH3HQOF4G3M/</a>
+          <a href="https://security.netapp.com/advisory/ntap-20190606-0002/">https://security.netapp.com/advisory/ntap-20190606-0002/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4004-1">https://ubuntu.com/security/notices/USN-4004-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4004-2">https://ubuntu.com/security/notices/USN-4004-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-4019-1">https://ubuntu.com/security/notices/USN-4019-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-4019-2">https://ubuntu.com/security/notices/USN-4019-2</a>
+          <a href="https://usn.ubuntu.com/4004-1/">https://usn.ubuntu.com/4004-1/</a>
+          <a href="https://usn.ubuntu.com/4004-2/">https://usn.ubuntu.com/4004-2/</a>
+          <a href="https://usn.ubuntu.com/4019-1/">https://usn.ubuntu.com/4019-1/</a>
+          <a href="https://usn.ubuntu.com/4019-2/">https://usn.ubuntu.com/4019-2/</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2020.html">https://www.oracle.com/security-alerts/cpujan2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+          <a href="https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html">https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html</a>
+          <a href="https://www.sqlite.org/releaselog/3_28_0.html">https://www.sqlite.org/releaselog/3_28_0.html</a>
+          <a href="https://www.sqlite.org/src/info/90acdbfce9c08858">https://www.sqlite.org/src/info/90acdbfce9c08858</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sqlite-libs</td>
+        <td>CVE-2019-19244</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.26.0-r3</td>
+        <td>3.28.0-r2</td>
+        <td class="links" data-more-links="off">
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19244">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19244</a>
+          <a href="https://github.com/sqlite/sqlite/commit/e59c562b3f6894f84c715772c4b116d7b5c01348">https://github.com/sqlite/sqlite/commit/e59c562b3f6894f84c715772c4b116d7b5c01348</a>
+          <a href="https://ubuntu.com/security/notices/USN-4205-1">https://ubuntu.com/security/notices/USN-4205-1</a>
+          <a href="https://usn.ubuntu.com/4205-1/">https://usn.ubuntu.com/4205-1/</a>
+          <a href="https://www.oracle.com/security-alerts/cpuapr2020.html">https://www.oracle.com/security-alerts/cpuapr2020.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sqlite-libs</td>
+        <td>CVE-2019-5018</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.26.0-r3</td>
+        <td>3.28.0-r0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://packetstormsecurity.com/files/152809/Sqlite3-Window-Function-Remote-Code-Execution.html">http://packetstormsecurity.com/files/152809/Sqlite3-Window-Function-Remote-Code-Execution.html</a>
+          <a href="http://www.securityfocus.com/bid/108294">http://www.securityfocus.com/bid/108294</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5018">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5018</a>
+          <a href="https://linux.oracle.com/cve/CVE-2019-5018.html">https://linux.oracle.com/cve/CVE-2019-5018.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2020-4442.html">https://linux.oracle.com/errata/ELSA-2020-4442.html</a>
+          <a href="https://security.gentoo.org/glsa/201908-09">https://security.gentoo.org/glsa/201908-09</a>
+          <a href="https://security.netapp.com/advisory/ntap-20190521-0001/">https://security.netapp.com/advisory/ntap-20190521-0001/</a>
+          <a href="https://talosintelligence.com/vulnerability_reports/TALOS-2019-0777">https://talosintelligence.com/vulnerability_reports/TALOS-2019-0777</a>
+          <a href="https://ubuntu.com/security/notices/USN-4205-1">https://ubuntu.com/security/notices/USN-4205-1</a>
+          <a href="https://usn.ubuntu.com/4205-1/">https://usn.ubuntu.com/4205-1/</a>
+          <a href="https://www.talosintelligence.com/vulnerability_reports/TALOS-2019-0777">https://www.talosintelligence.com/vulnerability_reports/TALOS-2019-0777</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sqlite-libs</td>
+        <td>CVE-2020-11655</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.26.0-r3</td>
+        <td>3.28.0-r3</td>
+        <td class="links" data-more-links="off">
+          <a href="https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf">https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11655">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11655</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/05/msg00006.html">https://lists.debian.org/debian-lts-announce/2020/05/msg00006.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2020/08/msg00037.html">https://lists.debian.org/debian-lts-announce/2020/08/msg00037.html</a>
+          <a href="https://security.FreeBSD.org/advisories/FreeBSD-SA-20:22.sqlite.asc">https://security.FreeBSD.org/advisories/FreeBSD-SA-20:22.sqlite.asc</a>
+          <a href="https://security.gentoo.org/glsa/202007-26">https://security.gentoo.org/glsa/202007-26</a>
+          <a href="https://security.netapp.com/advisory/ntap-20200416-0001/">https://security.netapp.com/advisory/ntap-20200416-0001/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4394-1">https://ubuntu.com/security/notices/USN-4394-1</a>
+          <a href="https://usn.ubuntu.com/4394-1/">https://usn.ubuntu.com/4394-1/</a>
+          <a href="https://www.oracle.com/security-alerts/cpuApr2021.html">https://www.oracle.com/security-alerts/cpuApr2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujan2021.html">https://www.oracle.com/security-alerts/cpujan2021.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2020.html">https://www.oracle.com/security-alerts/cpujul2020.html</a>
+          <a href="https://www.oracle.com/security-alerts/cpuoct2020.html">https://www.oracle.com/security-alerts/cpuoct2020.html</a>
+          <a href="https://www.tenable.com/security/tns-2021-14">https://www.tenable.com/security/tns-2021-14</a>
+          <a href="https://www3.sqlite.org/cgi/src/info/4a302b42c7bf5e11">https://www3.sqlite.org/cgi/src/info/4a302b42c7bf5e11</a>
+          <a href="https://www3.sqlite.org/cgi/src/tktview?name=af4556bb5c">https://www3.sqlite.org/cgi/src/tktview?name=af4556bb5c</a>
+        </td>
+      </tr>
