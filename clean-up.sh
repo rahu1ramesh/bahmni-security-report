@@ -13,7 +13,7 @@ if [ -d "$ROOT_FOLDER" ]; then
     # Check if the subdirectory exists
     if [ -d "$SUB_DIR_PATH" ]; then
         # Calculate yesterday's date in the format DD-MM-YYYY
-        YESTERDAY_DATE=$(date --date yesterday "%d-%m-%Y")
+        YESTERDAY_DATE=$(date --date yesterday "+%d-%m-%Y")
         
         # New folder name with yesterday's date
         NEW_DIR_NAME="bahmni-$YESTERDAY_DATE"
