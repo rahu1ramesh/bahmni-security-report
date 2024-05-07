@@ -1,1 +1,683 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/bahmni-mart (amazon 2 (Karoo))</title>
+    <script>
+      window.onload = function() {
+        document.querySelectorAll('td.links').forEach(function(linkCell) {
+          var links = [].concat.apply([], linkCell.querySelectorAll('a'));
+          [].sort.apply(links, function(a, b) {
+            return a.href > b.href ? 1 : -1;
+          });
+          links.forEach(function(link, idx) {
+            if (links.length > 3 && 3 === idx) {
+              var toggleLink = document.createElement('a');
+              toggleLink.innerText = "Toggle more links";
+              toggleLink.href = "#toggleMore";
+              toggleLink.setAttribute("class", "toggle-more-links");
+              linkCell.appendChild(toggleLink);
+            }
+            linkCell.appendChild(link);
+          });
+        });
+        document.querySelectorAll('a.toggle-more-links').forEach(function(toggleLink) {
+          toggleLink.onclick = function() {
+            var expanded = toggleLink.parentElement.getAttribute("data-more-links");
+            toggleLink.parentElement.setAttribute("data-more-links", "on" === expanded ? "off" : "on");
+            return false;
+          };
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>bahmni/bahmni-mart (amazon 2 (Karoo))</h1>
+    <table>
+      <tr class="group-header"><th colspan="6">amazon</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+        <th>Links</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">cpio</td>
+        <td>CVE-2015-1197</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-11.amzn2</td>
+        <td>2.12-11.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://advisories.mageia.org/MGASA-2015-0080.html">http://advisories.mageia.org/MGASA-2015-0080.html</a>
+          <a href="http://packetstormsecurity.com/files/169458/Zimbra-Collaboration-Suite-TAR-Path-Traversal.html">http://packetstormsecurity.com/files/169458/Zimbra-Collaboration-Suite-TAR-Path-Traversal.html</a>
+          <a href="http://www.mandriva.com/security/advisories?name=MDVSA-2015:066">http://www.mandriva.com/security/advisories?name=MDVSA-2015:066</a>
+          <a href="http://www.openwall.com/lists/oss-security/2015/01/07/5">http://www.openwall.com/lists/oss-security/2015/01/07/5</a>
+          <a href="http://www.openwall.com/lists/oss-security/2015/01/18/7">http://www.openwall.com/lists/oss-security/2015/01/18/7</a>
+          <a href="http://www.openwall.com/lists/oss-security/2023/12/21/8">http://www.openwall.com/lists/oss-security/2023/12/21/8</a>
+          <a href="http://www.openwall.com/lists/oss-security/2023/12/27/1">http://www.openwall.com/lists/oss-security/2023/12/27/1</a>
+          <a href="http://www.securityfocus.com/bid/71914">http://www.securityfocus.com/bid/71914</a>
+          <a href="http://www.ubuntu.com/usn/USN-2906-1">http://www.ubuntu.com/usn/USN-2906-1</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2015-1197">https://access.redhat.com/security/cve/CVE-2015-1197</a>
+          <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=774669">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=774669</a>
+          <a href="https://lists.gnu.org/archive/html/bug-cpio/2015-01/msg00000.html">https://lists.gnu.org/archive/html/bug-cpio/2015-01/msg00000.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2015-1197">https://nvd.nist.gov/vuln/detail/CVE-2015-1197</a>
+          <a href="https://ubuntu.com/security/notices/USN-2906-1">https://ubuntu.com/security/notices/USN-2906-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2015-1197">https://www.cve.org/CVERecord?id=CVE-2015-1197</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glib2</td>
+        <td>CVE-2020-35457</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.56.1-9.amzn2.0.6</td>
+        <td>2.56.1-9.amzn2.0.8</td>
+        <td class="links" data-more-links="off">
+          <a href="https://gitlab.gnome.org/GNOME/glib/-/commit/63c5b62f0a984fac9a9700b12f54fe878e016a5d">https://gitlab.gnome.org/GNOME/glib/-/commit/63c5b62f0a984fac9a9700b12f54fe878e016a5d</a>
+          <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/2197">https://gitlab.gnome.org/GNOME/glib/-/issues/2197</a>
+          <a href="https://gitlab.gnome.org/GNOME/glib/-/releases/2.65.3">https://gitlab.gnome.org/GNOME/glib/-/releases/2.65.3</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35457">https://nvd.nist.gov/vuln/detail/CVE-2020-35457</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glib2</td>
+        <td>CVE-2021-28153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.56.1-9.amzn2.0.6</td>
+        <td>2.56.1-9.amzn2.0.7</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2022:8418">https://access.redhat.com/errata/RHSA-2022:8418</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2021-28153">https://access.redhat.com/security/cve/CVE-2021-28153</a>
+          <a href="https://bugzilla.redhat.com/1938291">https://bugzilla.redhat.com/1938291</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2022-8418.html">https://errata.almalinux.org/9/ALSA-2022-8418.html</a>
+          <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/2325">https://gitlab.gnome.org/GNOME/glib/-/issues/2325</a>
+          <a href="https://linux.oracle.com/cve/CVE-2021-28153.html">https://linux.oracle.com/cve/CVE-2021-28153.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2022-8418.html">https://linux.oracle.com/errata/ELSA-2022-8418.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/06/msg00006.html">https://lists.debian.org/debian-lts-announce/2022/06/msg00006.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6RXTD5HCP2K4AAUSWWZTBKQNHRCTAEOF/">https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6RXTD5HCP2K4AAUSWWZTBKQNHRCTAEOF/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ICUTQPHZNZWX2DZR46QFLQZRHVMHIILJ/">https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ICUTQPHZNZWX2DZR46QFLQZRHVMHIILJ/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28153">https://nvd.nist.gov/vuln/detail/CVE-2021-28153</a>
+          <a href="https://security.gentoo.org/glsa/202107-13">https://security.gentoo.org/glsa/202107-13</a>
+          <a href="https://security.netapp.com/advisory/ntap-20210416-0003/">https://security.netapp.com/advisory/ntap-20210416-0003/</a>
+          <a href="https://ubuntu.com/security/notices/USN-4764-1">https://ubuntu.com/security/notices/USN-4764-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2021-28153">https://www.cve.org/CVERecord?id=CVE-2021-28153</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/17/9">http://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/18/4">http://www.openwall.com/lists/oss-security/2024/04/18/4</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/24/2">http://www.openwall.com/lists/oss-security/2024/04/24/2</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-2961">https://access.redhat.com/security/cve/CVE-2024-2961</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html">https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">https://nvd.nist.gov/vuln/detail/CVE-2024-2961</a>
+          <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004">https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-1">https://ubuntu.com/security/notices/USN-6737-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-2">https://ubuntu.com/security/notices/USN-6737-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-6762-1">https://ubuntu.com/security/notices/USN-6762-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-2961">https://www.cve.org/CVERecord?id=CVE-2024-2961</a>
+          <a href="https://www.openwall.com/lists/oss-security/2024/04/17/9">https://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/17/9">http://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/18/4">http://www.openwall.com/lists/oss-security/2024/04/18/4</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/24/2">http://www.openwall.com/lists/oss-security/2024/04/24/2</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-2961">https://access.redhat.com/security/cve/CVE-2024-2961</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html">https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">https://nvd.nist.gov/vuln/detail/CVE-2024-2961</a>
+          <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004">https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-1">https://ubuntu.com/security/notices/USN-6737-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-2">https://ubuntu.com/security/notices/USN-6737-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-6762-1">https://ubuntu.com/security/notices/USN-6762-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-2961">https://www.cve.org/CVERecord?id=CVE-2024-2961</a>
+          <a href="https://www.openwall.com/lists/oss-security/2024/04/17/9">https://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-langpack-en</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/17/9">http://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/18/4">http://www.openwall.com/lists/oss-security/2024/04/18/4</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/24/2">http://www.openwall.com/lists/oss-security/2024/04/24/2</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-2961">https://access.redhat.com/security/cve/CVE-2024-2961</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html">https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">https://nvd.nist.gov/vuln/detail/CVE-2024-2961</a>
+          <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004">https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-1">https://ubuntu.com/security/notices/USN-6737-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-2">https://ubuntu.com/security/notices/USN-6737-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-6762-1">https://ubuntu.com/security/notices/USN-6762-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-2961">https://www.cve.org/CVERecord?id=CVE-2024-2961</a>
+          <a href="https://www.openwall.com/lists/oss-security/2024/04/17/9">https://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-minimal-langpack</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/17/9">http://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/18/4">http://www.openwall.com/lists/oss-security/2024/04/18/4</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/24/2">http://www.openwall.com/lists/oss-security/2024/04/24/2</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-2961">https://access.redhat.com/security/cve/CVE-2024-2961</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html">https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">https://nvd.nist.gov/vuln/detail/CVE-2024-2961</a>
+          <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004">https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-1">https://ubuntu.com/security/notices/USN-6737-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-2">https://ubuntu.com/security/notices/USN-6737-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-6762-1">https://ubuntu.com/security/notices/USN-6762-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-2961">https://www.cve.org/CVERecord?id=CVE-2024-2961</a>
+          <a href="https://www.openwall.com/lists/oss-security/2024/04/17/9">https://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcrypt</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/17/9">http://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/18/4">http://www.openwall.com/lists/oss-security/2024/04/18/4</a>
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/24/2">http://www.openwall.com/lists/oss-security/2024/04/24/2</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-2961">https://access.redhat.com/security/cve/CVE-2024-2961</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html">https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTJFBGHDYG5PEIFD5WSSSKSFZ2AZWC5N/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3I4KYS6EU6S7QZ47WFNTPVAHFIUQNEL/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YAMJQI3Y6BHWV3CUTYBXOZONCUJNOB2Z/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">https://nvd.nist.gov/vuln/detail/CVE-2024-2961</a>
+          <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004">https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2024-0004</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-1">https://ubuntu.com/security/notices/USN-6737-1</a>
+          <a href="https://ubuntu.com/security/notices/USN-6737-2">https://ubuntu.com/security/notices/USN-6737-2</a>
+          <a href="https://ubuntu.com/security/notices/USN-6762-1">https://ubuntu.com/security/notices/USN-6762-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-2961">https://www.cve.org/CVERecord?id=CVE-2024-2961</a>
+          <a href="https://www.openwall.com/lists/oss-security/2024/04/17/9">https://www.openwall.com/lists/oss-security/2024/04/17/9</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnghttp2</td>
+        <td>CVE-2024-28182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.41.0-1.amzn2.0.4</td>
+        <td>1.41.0-1.amzn2.0.5</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/03/16">http://www.openwall.com/lists/oss-security/2024/04/03/16</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-28182">https://access.redhat.com/security/cve/CVE-2024-28182</a>
+          <a href="https://github.com/nghttp2/nghttp2/commit/00201ecd8f982da3b67d4f6868af72a1b03b14e0">https://github.com/nghttp2/nghttp2/commit/00201ecd8f982da3b67d4f6868af72a1b03b14e0</a>
+          <a href="https://github.com/nghttp2/nghttp2/commit/d71a4668c6bead55805d18810d633fbb98315af9">https://github.com/nghttp2/nghttp2/commit/d71a4668c6bead55805d18810d633fbb98315af9</a>
+          <a href="https://github.com/nghttp2/nghttp2/security/advisories/GHSA-x6x3-gv8h-m57q">https://github.com/nghttp2/nghttp2/security/advisories/GHSA-x6x3-gv8h-m57q</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2024/04/msg00026.html">https://lists.debian.org/debian-lts-announce/2024/04/msg00026.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AGOME6ZXJG7664IPQNVE3DL67E3YP3HY/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AGOME6ZXJG7664IPQNVE3DL67E3YP3HY/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J6ZMXUGB66VAXDW5J6QSTHM5ET25FGSA/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J6ZMXUGB66VAXDW5J6QSTHM5ET25FGSA/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PXJO2EASHM2OQQLGVDY5ZSO7UVDVHTDK/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PXJO2EASHM2OQQLGVDY5ZSO7UVDVHTDK/</a>
+          <a href="https://nowotarski.info/http2-continuation-flood/">https://nowotarski.info/http2-continuation-flood/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28182">https://nvd.nist.gov/vuln/detail/CVE-2024-28182</a>
+          <a href="https://ubuntu.com/security/notices/USN-6754-1">https://ubuntu.com/security/notices/USN-6754-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-28182">https://www.cve.org/CVERecord?id=CVE-2024-28182</a>
+          <a href="https://www.kb.cert.org/vuls/id/421644">https://www.kb.cert.org/vuls/id/421644</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2024:0465">https://access.redhat.com/errata/RHSA-2024:0465</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2023-7104">https://access.redhat.com/security/cve/CVE-2023-7104</a>
+          <a href="https://bugzilla.redhat.com/2256194">https://bugzilla.redhat.com/2256194</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2256194">https://bugzilla.redhat.com/show_bug.cgi?id=2256194</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2024-0465.html">https://errata.almalinux.org/9/ALSA-2024-0465.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2024:0253">https://errata.rockylinux.org/RLSA-2024:0253</a>
+          <a href="https://linux.oracle.com/cve/CVE-2023-7104.html">https://linux.oracle.com/cve/CVE-2023-7104.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2024-0465.html">https://linux.oracle.com/errata/ELSA-2024-0465.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7104">https://nvd.nist.gov/vuln/detail/CVE-2023-7104</a>
+          <a href="https://security.netapp.com/advisory/ntap-20240112-0008/">https://security.netapp.com/advisory/ntap-20240112-0008/</a>
+          <a href="https://sqlite.org/forum/forumpost/5bcbf4571c">https://sqlite.org/forum/forumpost/5bcbf4571c</a>
+          <a href="https://sqlite.org/src/info/0e4e7a05c4204b47">https://sqlite.org/src/info/0e4e7a05c4204b47</a>
+          <a href="https://ubuntu.com/security/notices/USN-6566-1">https://ubuntu.com/security/notices/USN-6566-1</a>
+          <a href="https://vuldb.com/?ctiid.248999">https://vuldb.com/?ctiid.248999</a>
+          <a href="https://vuldb.com/?id.248999">https://vuldb.com/?id.248999</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-7104">https://www.cve.org/CVERecord?id=CVE-2023-7104</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2024:0465">https://access.redhat.com/errata/RHSA-2024:0465</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2023-7104">https://access.redhat.com/security/cve/CVE-2023-7104</a>
+          <a href="https://bugzilla.redhat.com/2256194">https://bugzilla.redhat.com/2256194</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2256194">https://bugzilla.redhat.com/show_bug.cgi?id=2256194</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2024-0465.html">https://errata.almalinux.org/9/ALSA-2024-0465.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2024:0253">https://errata.rockylinux.org/RLSA-2024:0253</a>
+          <a href="https://linux.oracle.com/cve/CVE-2023-7104.html">https://linux.oracle.com/cve/CVE-2023-7104.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2024-0465.html">https://linux.oracle.com/errata/ELSA-2024-0465.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7104">https://nvd.nist.gov/vuln/detail/CVE-2023-7104</a>
+          <a href="https://security.netapp.com/advisory/ntap-20240112-0008/">https://security.netapp.com/advisory/ntap-20240112-0008/</a>
+          <a href="https://sqlite.org/forum/forumpost/5bcbf4571c">https://sqlite.org/forum/forumpost/5bcbf4571c</a>
+          <a href="https://sqlite.org/src/info/0e4e7a05c4204b47">https://sqlite.org/src/info/0e4e7a05c4204b47</a>
+          <a href="https://ubuntu.com/security/notices/USN-6566-1">https://ubuntu.com/security/notices/USN-6566-1</a>
+          <a href="https://vuldb.com/?ctiid.248999">https://vuldb.com/?ctiid.248999</a>
+          <a href="https://vuldb.com/?id.248999">https://vuldb.com/?id.248999</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-7104">https://www.cve.org/CVERecord?id=CVE-2023-7104</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2024:0465">https://access.redhat.com/errata/RHSA-2024:0465</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2023-7104">https://access.redhat.com/security/cve/CVE-2023-7104</a>
+          <a href="https://bugzilla.redhat.com/2256194">https://bugzilla.redhat.com/2256194</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2256194">https://bugzilla.redhat.com/show_bug.cgi?id=2256194</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2024-0465.html">https://errata.almalinux.org/9/ALSA-2024-0465.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2024:0253">https://errata.rockylinux.org/RLSA-2024:0253</a>
+          <a href="https://linux.oracle.com/cve/CVE-2023-7104.html">https://linux.oracle.com/cve/CVE-2023-7104.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2024-0465.html">https://linux.oracle.com/errata/ELSA-2024-0465.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AYONA2XSNFMXLAW4IHLFI5UVV3QRNG5K/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7104">https://nvd.nist.gov/vuln/detail/CVE-2023-7104</a>
+          <a href="https://security.netapp.com/advisory/ntap-20240112-0008/">https://security.netapp.com/advisory/ntap-20240112-0008/</a>
+          <a href="https://sqlite.org/forum/forumpost/5bcbf4571c">https://sqlite.org/forum/forumpost/5bcbf4571c</a>
+          <a href="https://sqlite.org/src/info/0e4e7a05c4204b47">https://sqlite.org/src/info/0e4e7a05c4204b47</a>
+          <a href="https://ubuntu.com/security/notices/USN-6566-1">https://ubuntu.com/security/notices/USN-6566-1</a>
+          <a href="https://vuldb.com/?ctiid.248999">https://vuldb.com/?ctiid.248999</a>
+          <a href="https://vuldb.com/?id.248999">https://vuldb.com/?id.248999</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-7104">https://www.cve.org/CVERecord?id=CVE-2023-7104</a>
+        </td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="6">jar</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+        <th>Links</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">ch.qos.logback:logback-classic</td>
+        <td>CVE-2023-6378</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.0</td>
+        <td>1.3.12, 1.4.12, 1.2.13</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-6378">https://access.redhat.com/security/cve/CVE-2023-6378</a>
+          <a href="https://github.com/qos-ch/logback">https://github.com/qos-ch/logback</a>
+          <a href="https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb">https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb</a>
+          <a href="https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731">https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731</a>
+          <a href="https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3">https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3</a>
+          <a href="https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158">https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158</a>
+          <a href="https://logback.qos.ch/manual/receivers.html">https://logback.qos.ch/manual/receivers.html</a>
+          <a href="https://logback.qos.ch/news.html#1.2.13">https://logback.qos.ch/news.html#1.2.13</a>
+          <a href="https://logback.qos.ch/news.html#1.3.12">https://logback.qos.ch/news.html#1.3.12</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6378">https://nvd.nist.gov/vuln/detail/CVE-2023-6378</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-6378">https://www.cve.org/CVERecord?id=CVE-2023-6378</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">ch.qos.logback:logback-core</td>
+        <td>CVE-2023-6378</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.9</td>
+        <td>1.3.12, 1.4.12, 1.2.13</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-6378">https://access.redhat.com/security/cve/CVE-2023-6378</a>
+          <a href="https://github.com/qos-ch/logback">https://github.com/qos-ch/logback</a>
+          <a href="https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb">https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb</a>
+          <a href="https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731">https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731</a>
+          <a href="https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3">https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3</a>
+          <a href="https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158">https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158</a>
+          <a href="https://logback.qos.ch/manual/receivers.html">https://logback.qos.ch/manual/receivers.html</a>
+          <a href="https://logback.qos.ch/news.html#1.2.13">https://logback.qos.ch/news.html#1.2.13</a>
+          <a href="https://logback.qos.ch/news.html#1.3.12">https://logback.qos.ch/news.html#1.3.12</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6378">https://nvd.nist.gov/vuln/detail/CVE-2023-6378</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-6378">https://www.cve.org/CVERecord?id=CVE-2023-6378</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2018-3258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.41</td>
+        <td>8.0.13</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html">http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html</a>
+          <a href="http://www.securityfocus.com/bid/105589">http://www.securityfocus.com/bid/105589</a>
+          <a href="http://www.securitytracker.com/id/1041888">http://www.securitytracker.com/id/1041888</a>
+          <a href="https://access.redhat.com/errata/RHSA-2019:1545">https://access.redhat.com/errata/RHSA-2019:1545</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2018-3258">https://access.redhat.com/security/cve/CVE-2018-3258</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-3258">https://nvd.nist.gov/vuln/detail/CVE-2018-3258</a>
+          <a href="https://security.netapp.com/advisory/ntap-20181018-0002">https://security.netapp.com/advisory/ntap-20181018-0002</a>
+          <a href="https://security.netapp.com/advisory/ntap-20181018-0002/">https://security.netapp.com/advisory/ntap-20181018-0002/</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2018-3258">https://www.cve.org/CVERecord?id=CVE-2018-3258</a>
+          <a href="https://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html#CVE-2018-3258">https://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html#CVE-2018-3258</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jettison:jettison</td>
+        <td>CVE-2023-1436</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.5.2</td>
+        <td>1.5.4</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-1436">https://access.redhat.com/security/cve/CVE-2023-1436</a>
+          <a href="https://github.com/jettison-json/jettison">https://github.com/jettison-json/jettison</a>
+          <a href="https://github.com/jettison-json/jettison/issues/60">https://github.com/jettison-json/jettison/issues/60</a>
+          <a href="https://github.com/jettison-json/jettison/pull/62">https://github.com/jettison-json/jettison/pull/62</a>
+          <a href="https://github.com/jettison-json/jettison/releases/tag/jettison-1.5.4">https://github.com/jettison-json/jettison/releases/tag/jettison-1.5.4</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1436">https://nvd.nist.gov/vuln/detail/CVE-2023-1436</a>
+          <a href="https://research.jfrog.com/vulnerabilities/jettison-json-array-dos-xray-427911">https://research.jfrog.com/vulnerabilities/jettison-json-array-dos-xray-427911</a>
+          <a href="https://research.jfrog.com/vulnerabilities/jettison-json-array-dos-xray-427911/">https://research.jfrog.com/vulnerabilities/jettison-json-array-dos-xray-427911/</a>
+          <a href="https://ubuntu.com/security/notices/USN-6179-1">https://ubuntu.com/security/notices/USN-6179-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-1436">https://www.cve.org/CVERecord?id=CVE-2023-1436</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.json:json</td>
+        <td>CVE-2022-45688</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">20160212</td>
+        <td>20230227</td>
+        <td class="links" data-more-links="off">
+          <a href="https://github.com/dromara/hutool/commit/6a2b585de0a380e8c12016dbaa1620b69be11b8c">https://github.com/dromara/hutool/commit/6a2b585de0a380e8c12016dbaa1620b69be11b8c</a>
+          <a href="https://github.com/dromara/hutool/issues/2748">https://github.com/dromara/hutool/issues/2748</a>
+          <a href="https://github.com/dromara/hutool/releases/tag/5.8.25">https://github.com/dromara/hutool/releases/tag/5.8.25</a>
+          <a href="https://github.com/stleary/JSON-java/commit/a6e412bded7a0ad605adfeca029318f184c32102">https://github.com/stleary/JSON-java/commit/a6e412bded7a0ad605adfeca029318f184c32102</a>
+          <a href="https://github.com/stleary/JSON-java/issues/708">https://github.com/stleary/JSON-java/issues/708</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45688">https://nvd.nist.gov/vuln/detail/CVE-2022-45688</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.json:json</td>
+        <td>CVE-2023-5072</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">20160212</td>
+        <td>20231013</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2023/12/13/4">http://www.openwall.com/lists/oss-security/2023/12/13/4</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2023-5072">https://access.redhat.com/security/cve/CVE-2023-5072</a>
+          <a href="https://github.com/google/security-research/security/advisories/GHSA-4jq9-2xhw-jpx7">https://github.com/google/security-research/security/advisories/GHSA-4jq9-2xhw-jpx7</a>
+          <a href="https://github.com/stleary/JSON-java">https://github.com/stleary/JSON-java</a>
+          <a href="https://github.com/stleary/JSON-java/commit/60662e2f8384d3449822a3a1179bfe8de67b55bb">https://github.com/stleary/JSON-java/commit/60662e2f8384d3449822a3a1179bfe8de67b55bb</a>
+          <a href="https://github.com/stleary/JSON-java/issues/758">https://github.com/stleary/JSON-java/issues/758</a>
+          <a href="https://github.com/stleary/JSON-java/issues/771">https://github.com/stleary/JSON-java/issues/771</a>
+          <a href="https://github.com/stleary/JSON-java/pull/759">https://github.com/stleary/JSON-java/pull/759</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5072">https://nvd.nist.gov/vuln/detail/CVE-2023-5072</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-5072">https://www.cve.org/CVERecord?id=CVE-2023-5072</a>
+        </td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.postgresql:postgresql</td>
+        <td>CVE-2024-1597</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">42.3.2</td>
+        <td>42.2.28, 42.3.9, 42.4.4, 42.5.5, 42.6.1, 42.7.2</td>
+        <td class="links" data-more-links="off">
+          <a href="http://www.openwall.com/lists/oss-security/2024/04/02/6">http://www.openwall.com/lists/oss-security/2024/04/02/6</a>
+          <a href="https://access.redhat.com/errata/RHSA-2024:1436">https://access.redhat.com/errata/RHSA-2024:1436</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2024-1597">https://access.redhat.com/security/cve/CVE-2024-1597</a>
+          <a href="https://bugzilla.redhat.com/2266523">https://bugzilla.redhat.com/2266523</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2266523">https://bugzilla.redhat.com/show_bug.cgi?id=2266523</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1597">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1597</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2024-1436.html">https://errata.almalinux.org/9/ALSA-2024-1436.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2024:1435">https://errata.rockylinux.org/RLSA-2024:1435</a>
+          <a href="https://github.com/pgjdbc/pgjdbc">https://github.com/pgjdbc/pgjdbc</a>
+          <a href="https://github.com/pgjdbc/pgjdbc/commit/06abfb78a627277a580d4df825f210e96a4e14ee">https://github.com/pgjdbc/pgjdbc/commit/06abfb78a627277a580d4df825f210e96a4e14ee</a>
+          <a href="https://github.com/pgjdbc/pgjdbc/commit/93b0fcb2711d9c1e3a2a03134369738a02a58b40">https://github.com/pgjdbc/pgjdbc/commit/93b0fcb2711d9c1e3a2a03134369738a02a58b40</a>
+          <a href="https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-24rp-q3w6-vc56">https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-24rp-q3w6-vc56</a>
+          <a href="https://linux.oracle.com/cve/CVE-2024-1597.html">https://linux.oracle.com/cve/CVE-2024-1597.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2024-1436.html">https://linux.oracle.com/errata/ELSA-2024-1436.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TZQTSMESZD2RJ5XBPSXH3TIQVUW5DIUU/">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TZQTSMESZD2RJ5XBPSXH3TIQVUW5DIUU/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1597">https://nvd.nist.gov/vuln/detail/CVE-2024-1597</a>
+          <a href="https://security.netapp.com/advisory/ntap-20240419-0008/">https://security.netapp.com/advisory/ntap-20240419-0008/</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2024-1597">https://www.cve.org/CVERecord?id=CVE-2024-1597</a>
+          <a href="https://www.enterprisedb.com/docs/jdbc_connector/latest/01_jdbc_rel_notes/">https://www.enterprisedb.com/docs/jdbc_connector/latest/01_jdbc_rel_notes/</a>
+          <a href="https://www.enterprisedb.com/docs/security/assessments/cve-2024-1597/">https://www.enterprisedb.com/docs/security/assessments/cve-2024-1597/</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.postgresql:postgresql</td>
+        <td>CVE-2022-31197</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">42.3.2</td>
+        <td>42.2.26, 42.4.1, 42.3.7</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2023:0318">https://access.redhat.com/errata/RHSA-2023:0318</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-31197">https://access.redhat.com/security/cve/CVE-2022-31197</a>
+          <a href="https://bugzilla.redhat.com/2129428">https://bugzilla.redhat.com/2129428</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2129428">https://bugzilla.redhat.com/show_bug.cgi?id=2129428</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31197">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31197</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2023-0318.html">https://errata.almalinux.org/9/ALSA-2023-0318.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2023:0318">https://errata.rockylinux.org/RLSA-2023:0318</a>
+          <a href="https://github.com/pgjdbc/pgjdbc">https://github.com/pgjdbc/pgjdbc</a>
+          <a href="https://github.com/pgjdbc/pgjdbc/commit/739e599d52ad80f8dcd6efedc6157859b1a9d637">https://github.com/pgjdbc/pgjdbc/commit/739e599d52ad80f8dcd6efedc6157859b1a9d637</a>
+          <a href="https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-r38f-c4h4-hqq2">https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-r38f-c4h4-hqq2</a>
+          <a href="https://linux.oracle.com/cve/CVE-2022-31197.html">https://linux.oracle.com/cve/CVE-2022-31197.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2023-0318.html">https://linux.oracle.com/errata/ELSA-2023-0318.html</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00009.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00009.html</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I6WHUADTZBBQLVHO4YG4XCWDGWBT4LRP/">https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I6WHUADTZBBQLVHO4YG4XCWDGWBT4LRP/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UTFE6SV33P5YYU2GNTQZQKQRVR3GYE4S/">https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UTFE6SV33P5YYU2GNTQZQKQRVR3GYE4S/</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6WHUADTZBBQLVHO4YG4XCWDGWBT4LRP">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6WHUADTZBBQLVHO4YG4XCWDGWBT4LRP</a>
+          <a href="https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UTFE6SV33P5YYU2GNTQZQKQRVR3GYE4S">https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UTFE6SV33P5YYU2GNTQZQKQRVR3GYE4S</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31197">https://nvd.nist.gov/vuln/detail/CVE-2022-31197</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-31197">https://www.cve.org/CVERecord?id=CVE-2022-31197</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework.boot:spring-boot</td>
+        <td>CVE-2022-27772</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.5.22.RELEASE</td>
+        <td>2.2.11.RELEASE</td>
+        <td class="links" data-more-links="off">
+          <a href="https://github.com/JLLeitschuh/security-research/security/advisories/GHSA-cm59-pr5q-cw85">https://github.com/JLLeitschuh/security-research/security/advisories/GHSA-cm59-pr5q-cw85</a>
+          <a href="https://github.com/spring-projects/spring-boot">https://github.com/spring-projects/spring-boot</a>
+          <a href="https://github.com/spring-projects/spring-boot/commit/667ccdae84822072f9ea1a27ed5c77964c71002d">https://github.com/spring-projects/spring-boot/commit/667ccdae84822072f9ea1a27ed5c77964c71002d</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27772">https://nvd.nist.gov/vuln/detail/CVE-2022-27772</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework.boot:spring-boot-autoconfigure</td>
+        <td>CVE-2023-20883</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.5.22.RELEASE</td>
+        <td>3.0.7, 2.7.12, 2.6.15, 2.5.15</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-20883">https://access.redhat.com/security/cve/CVE-2023-20883</a>
+          <a href="https://github.com/spring-projects/spring-boot">https://github.com/spring-projects/spring-boot</a>
+          <a href="https://github.com/spring-projects/spring-boot/commit/418dd1ba5bdad79b55a043000164bfcbda2acd78">https://github.com/spring-projects/spring-boot/commit/418dd1ba5bdad79b55a043000164bfcbda2acd78</a>
+          <a href="https://github.com/spring-projects/spring-boot/issues/35552">https://github.com/spring-projects/spring-boot/issues/35552</a>
+          <a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.15">https://github.com/spring-projects/spring-boot/releases/tag/v2.5.15</a>
+          <a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.6.15">https://github.com/spring-projects/spring-boot/releases/tag/v2.6.15</a>
+          <a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.7.12">https://github.com/spring-projects/spring-boot/releases/tag/v2.7.12</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20883">https://nvd.nist.gov/vuln/detail/CVE-2023-20883</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230703-0008">https://security.netapp.com/advisory/ntap-20230703-0008</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230703-0008/">https://security.netapp.com/advisory/ntap-20230703-0008/</a>
+          <a href="https://spring.io/security/cve-2023-20883">https://spring.io/security/cve-2023-20883</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-20883">https://www.cve.org/CVERecord?id=CVE-2023-20883</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-context</td>
+        <td>CVE-2022-22968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.3.25.RELEASE</td>
+        <td>5.3.19, 5.2.21</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2022-22968">https://access.redhat.com/security/cve/CVE-2022-22968</a>
+          <a href="https://github.com/spring-projects/spring-framework">https://github.com/spring-projects/spring-framework</a>
+          <a href="https://github.com/spring-projects/spring-framework/commit/833e750175349ab4fd502109a8b41af77e25cdea">https://github.com/spring-projects/spring-framework/commit/833e750175349ab4fd502109a8b41af77e25cdea</a>
+          <a href="https://github.com/spring-projects/spring-framework/commit/a7cf19cec5ebd270f97a194d749e2d5701ad2ab7">https://github.com/spring-projects/spring-framework/commit/a7cf19cec5ebd270f97a194d749e2d5701ad2ab7</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22968">https://nvd.nist.gov/vuln/detail/CVE-2022-22968</a>
+          <a href="https://security.netapp.com/advisory/ntap-20220602-0004">https://security.netapp.com/advisory/ntap-20220602-0004</a>
+          <a href="https://security.netapp.com/advisory/ntap-20220602-0004/">https://security.netapp.com/advisory/ntap-20220602-0004/</a>
+          <a href="https://tanzu.vmware.com/security/cve-2022-22968">https://tanzu.vmware.com/security/cve-2022-22968</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-22968">https://www.cve.org/CVERecord?id=CVE-2022-22968</a>
+          <a href="https://www.oracle.com/security-alerts/cpujul2022.html">https://www.oracle.com/security-alerts/cpujul2022.html</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-expression</td>
+        <td>CVE-2023-20863</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.20</td>
+        <td>6.0.8, 5.3.27, 5.2.24.RELEASE</td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-20863">https://access.redhat.com/security/cve/CVE-2023-20863</a>
+          <a href="https://github.com/spring-projects/spring-framework">https://github.com/spring-projects/spring-framework</a>
+          <a href="https://github.com/spring-projects/spring-framework/commit/965a6392757d20f9db19241126fcc719a51eac15">https://github.com/spring-projects/spring-framework/commit/965a6392757d20f9db19241126fcc719a51eac15</a>
+          <a href="https://github.com/spring-projects/spring-framework/commit/b73f5fcac22555f844cf27a7eeb876cb9d7f7f7e">https://github.com/spring-projects/spring-framework/commit/b73f5fcac22555f844cf27a7eeb876cb9d7f7f7e</a>
+          <a href="https://github.com/spring-projects/spring-framework/commit/ebc82654282bda547fbc20a9749ab1bda886a46f">https://github.com/spring-projects/spring-framework/commit/ebc82654282bda547fbc20a9749ab1bda886a46f</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20863">https://nvd.nist.gov/vuln/detail/CVE-2023-20863</a>
+          <a href="https://spring.io/security/cve-2023-20863">https://spring.io/security/cve-2023-20863</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-20863">https://www.cve.org/CVERecord?id=CVE-2023-20863</a>
+        </td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.yaml:snakeyaml</td>
+        <td>CVE-2022-1471</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.32</td>
+        <td>2.0</td>
+        <td class="links" data-more-links="off">
+          <a href="http://packetstormsecurity.com/files/175095/PyTorch-Model-Server-Registration-Deserialization-Remote-Code-Execution.html">http://packetstormsecurity.com/files/175095/PyTorch-Model-Server-Registration-Deserialization-Remote-Code-Execution.html</a>
+          <a href="http://www.openwall.com/lists/oss-security/2023/11/19/1">http://www.openwall.com/lists/oss-security/2023/11/19/1</a>
+          <a href="https://access.redhat.com/errata/RHSA-2022:9058">https://access.redhat.com/errata/RHSA-2022:9058</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-1471">https://access.redhat.com/security/cve/CVE-2022-1471</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml">https://bitbucket.org/snakeyaml/snakeyaml</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/commits/5014df1a36f50aca54405bb8433bc99a8847f758">https://bitbucket.org/snakeyaml/snakeyaml/commits/5014df1a36f50aca54405bb8433bc99a8847f758</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/commits/acc44099f5f4af26ff86b4e4e4cc1c874e2dc5c4">https://bitbucket.org/snakeyaml/snakeyaml/commits/acc44099f5f4af26ff86b4e4e4cc1c874e2dc5c4</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64581479">https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64581479</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64634374">https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64634374</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64876314">https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64876314</a>
+          <a href="https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471">https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471</a>
+          <a href="https://bugzilla.redhat.com/2150009">https://bugzilla.redhat.com/2150009</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2150009">https://bugzilla.redhat.com/show_bug.cgi?id=2150009</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1471">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1471</a>
+          <a href="https://errata.almalinux.org/8/ALSA-2022-9058.html">https://errata.almalinux.org/8/ALSA-2022-9058.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2022:9058">https://errata.rockylinux.org/RLSA-2022:9058</a>
+          <a href="https://github.com/google/security-research/security/advisories/GHSA-mjmj-j48q-9wg2">https://github.com/google/security-research/security/advisories/GHSA-mjmj-j48q-9wg2</a>
+          <a href="https://github.com/mbechler/marshalsec">https://github.com/mbechler/marshalsec</a>
+          <a href="https://groups.google.com/g/kubernetes-security-announce/c/mwrakFaEdnc">https://groups.google.com/g/kubernetes-security-announce/c/mwrakFaEdnc</a>
+          <a href="https://linux.oracle.com/cve/CVE-2022-1471.html">https://linux.oracle.com/cve/CVE-2022-1471.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2022-9058-1.html">https://linux.oracle.com/errata/ELSA-2022-9058-1.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1471">https://nvd.nist.gov/vuln/detail/CVE-2022-1471</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230818-0015">https://security.netapp.com/advisory/ntap-20230818-0015</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230818-0015/">https://security.netapp.com/advisory/ntap-20230818-0015/</a>
+          <a href="https://snyk.io/blog/unsafe-deserialization-snakeyaml-java-cve-2022-1471">https://snyk.io/blog/unsafe-deserialization-snakeyaml-java-cve-2022-1471</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-1471">https://www.cve.org/CVERecord?id=CVE-2022-1471</a>
+          <a href="https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf?raw=true">https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf?raw=true</a>
+        </td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>
