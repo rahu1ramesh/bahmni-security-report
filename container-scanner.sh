@@ -54,12 +54,6 @@ echo "Generating scan report...."
 
 # Iterate through each image and run Trivy scan
 for image in $REPO_LIST; do
-    # Check if the image is in the ignored list
-    if [[ " ${ignored_containers[@]} " =~ " ${image} " ]]; then
-        echo "Skipping image: $image (found in ignored-containers)"
-        continue
-    fi
-
     # Extract image name and tag
     image_name=$(echo "$image" | cut -d ':' -f 1)
     tag="$(echo "$image" | cut -d ':' -f 2)"
@@ -67,9 +61,11 @@ for image in $REPO_LIST; do
     # Replace '/' with '-' in the image name
     image_name=$(echo "$image_name" | tr '/' '-')
 
+    # Define the Output File
+    output_file_txt="$ROOT_DIR/${DIR}/${image}-${TODAY_DATE}.html"
+
     # Run Trivy scan on the image
     echo "Scanning image: $image"
-    output_file_txt="$ROOT_DIR/${DIR}/${image}-${TODAY_DATE}.html"
     trivy image --severity HIGH,CRITICAL --format template --template "@html.tpl" --output "$output_file_txt" "${ORG}/$image_name"
     echo "" >> "$output_file_txt"
 
