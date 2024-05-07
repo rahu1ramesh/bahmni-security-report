@@ -1,57 +1,37 @@
-name: Deploy Scan Report to GitHub Pages
+name: Scan Images In Bahmni Namespace
 
 on:
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
+  scan-containers:
+    name: Scan Images In Bahmni Namespace
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set Script Execute Permission
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+      - name: Get Scanner Script and Template File
         run: |
-          chmod +x clean-up.sh
+          curl -o container-scanner.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/container-scanner.sh
           chmod +x container-scanner.sh
-          chmod +x index-builder.sh
-      - name: Clean Older Files
-        run: |
-          ./clean-up.sh
+          curl -o html.tpl https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/html.tpl
       - name: Scan Images In Bahmni Namespace
         run: |
           ./container-scanner.sh
-      - name: Build Index Page
-        run: |
-          ./index-builder.sh
       - name: Commit and push changes
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[Rahul] | Add. Scan Report"
-          branch: ${{ github.ref }}
+          commit_message: "[Bahmni Infra] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
+          create_branch: true
+          branch: report-test
           file_pattern: '*.html'
           repository: .
-          commit_user_name: Rahul Ramesh
-          commit_user_email: rahul.ramesh@thoughtworks.com
-          commit_author: rahu1ramesh <rahul.ramesh@thoughtworks.com>
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './container-scanner-reports/'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          commit_user_name: Bahmni Infra
+          commit_user_email: infrastructure@bahmni.org
+          commit_author: bahmni-infra <infrastructure@bahmni.org>
