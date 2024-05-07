@@ -19,7 +19,7 @@ ORG="bahmni"
 # Check if trivy is installed and install it if not
 if ! command -v trivy &> /dev/null; then
     echo "Trivy is not installed. Installing..."
-    wget https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.3_Linux-64bit.deb
+    wget https://github.com/aquasecurity/trivy/releases/download/v0.51.1/trivy_0.51.1_Linux-64bit.deb
     sudo dpkg -i trivy_0.18.3_Linux-64bit.deb
 else
     echo "Found trivy, using trivy v$(trivy -v | cut -d ' ' -f 2)"
