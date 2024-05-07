@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/odoo-16 (debian 11.9)</title>
+  </head>
+  <body>
+    <h1>bahmni/odoo-16 (debian 11.9)</h1>
+    <table>
+      <tr class="group-header"><th colspan="5">debian</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bash</td>
+        <td>CVE-2022-3715</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1-2+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">curl</td>
+        <td>CVE-2023-23914</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">curl</td>
+        <td>CVE-2022-42916</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">curl</td>
+        <td>CVE-2022-43551</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">curl</td>
+        <td>CVE-2024-2398</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">e2fsprogs</td>
+        <td>CVE-2022-1304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.46.2-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libc-bin</td>
+        <td>CVE-2024-33599</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.31-13+deb11u9</td>
+        <td>2.31-13+deb11u10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libc6</td>
+        <td>CVE-2024-33599</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.31-13+deb11u9</td>
+        <td>2.31-13+deb11u10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcom-err2</td>
+        <td>CVE-2022-1304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.46.2-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libcurl4</td>
+        <td>CVE-2023-23914</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcurl4</td>
+        <td>CVE-2022-42916</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcurl4</td>
+        <td>CVE-2022-43551</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcurl4</td>
+        <td>CVE-2024-2398</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.74.0-1.3+deb11u11</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libdb5.3</td>
+        <td>CVE-2019-8457</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">5.3.28+dfsg1-0.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libexpat1</td>
+        <td>CVE-2023-52425</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.10-2+deb11u5</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libext2fs2</td>
+        <td>CVE-2022-1304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.46.2-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libgcrypt20</td>
+        <td>CVE-2021-33560</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.7-6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libgnutls30</td>
+        <td>CVE-2024-0553</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.7.1-5+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libgnutls30</td>
+        <td>CVE-2024-0567</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.7.1-5+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libgssapi-krb5-2</td>
+        <td>CVE-2024-26462</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.18.3-6+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libharfbuzz0b</td>
+        <td>CVE-2023-25193</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.4-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libk5crypto3</td>
+        <td>CVE-2024-26462</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.18.3-6+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libkrb5-3</td>
+        <td>CVE-2024-26462</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.18.3-6+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libkrb5support0</td>
+        <td>CVE-2024-26462</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.18.3-6+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libldap-2.4-2</td>
+        <td>CVE-2023-2953</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.4.57+dfsg-3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-32002</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-30581</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-30589</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-30590</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-32006</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2023-32559</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2024-22019</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode-dev</td>
+        <td>CVE-2024-27983</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-32002</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-30581</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-30589</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-30590</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-32006</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2023-32559</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2024-22019</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnode72</td>
+        <td>CVE-2024-27983</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libperl5.32</td>
+        <td>CVE-2020-16156</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libperl5.32</td>
+        <td>CVE-2023-31484</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2021-29921</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2015-20107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2020-10735</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2021-3737</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2022-0391</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2022-42919</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2022-45061</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-minimal</td>
+        <td>CVE-2023-6597</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2021-29921</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2015-20107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2020-10735</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2021-3737</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2022-0391</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2022-42919</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2022-45061</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libpython3.9-stdlib</td>
+        <td>CVE-2023-6597</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsass1</td>
+        <td>CVE-2022-26592</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.6.4+20201122-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsass1</td>
+        <td>CVE-2022-43357</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.6.4+20201122-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsass1</td>
+        <td>CVE-2022-43358</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.6.4+20201122-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsqlite3-0</td>
+        <td>CVE-2021-31239</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.34.1-3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsqlite3-0</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.34.1-3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libss2</td>
+        <td>CVE-2022-1304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.46.2-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssh2-1</td>
+        <td>CVE-2020-22218</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.0-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsystemd0</td>
+        <td>CVE-2023-50387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">247.3-7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libsystemd0</td>
+        <td>CVE-2023-50868</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">247.3-7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libtiff5</td>
+        <td>CVE-2023-52355</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.2.0-1+deb11u5</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libtiff5</td>
+        <td>CVE-2023-52356</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.2.0-1+deb11u5</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libudev1</td>
+        <td>CVE-2023-50387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">247.3-7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libudev1</td>
+        <td>CVE-2023-50868</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">247.3-7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libxml2</td>
+        <td>CVE-2022-2309</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.9.10+dfsg-6.7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libxml2</td>
+        <td>CVE-2024-25062</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.9.10+dfsg-6.7+deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libzstd1</td>
+        <td>CVE-2022-4899</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.8+dfsg-2.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">logsave</td>
+        <td>CVE-2022-1304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.46.2-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">node-ip</td>
+        <td>CVE-2023-42282</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.1.5-5</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">node-semver</td>
+        <td>CVE-2022-25883</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.3.4-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-32002</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-30581</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-30589</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-30590</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-32006</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2023-32559</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2024-22019</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nodejs</td>
+        <td>CVE-2024-27983</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">12.22.12~dfsg-1~deb11u4</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">npm</td>
+        <td>CVE-2021-43616</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">7.5.2+ds-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">npm</td>
+        <td>CVE-2021-39134</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.5.2+ds-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">npm</td>
+        <td>CVE-2021-39135</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.5.2+ds-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl</td>
+        <td>CVE-2020-16156</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl</td>
+        <td>CVE-2023-31484</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-base</td>
+        <td>CVE-2020-16156</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-base</td>
+        <td>CVE-2023-31484</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-modules-5.32</td>
+        <td>CVE-2020-16156</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-modules-5.32</td>
+        <td>CVE-2023-31484</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.32.1-4+deb11u3</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-cryptography</td>
+        <td>CVE-2023-49083</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.3.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-cryptography</td>
+        <td>CVE-2023-50782</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.3.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-cryptography</td>
+        <td>CVE-2024-26130</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.3.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-lxml</td>
+        <td>CVE-2022-2309</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.6.3+dfsg-0.1+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">python3-pil</td>
+        <td>CVE-2022-24303</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">8.1.2+dfsg-0.3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-pil</td>
+        <td>CVE-2021-23437</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.1.2+dfsg-0.3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-pil</td>
+        <td>CVE-2022-45198</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.1.2+dfsg-0.3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-pil</td>
+        <td>CVE-2023-44271</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.1.2+dfsg-0.3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-pil</td>
+        <td>CVE-2023-50447</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">8.1.2+dfsg-0.3+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-renderpm</td>
+        <td>CVE-2023-33733</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.5.59-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-reportlab</td>
+        <td>CVE-2023-33733</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.5.59-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-reportlab-accel</td>
+        <td>CVE-2023-33733</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.5.59-2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-urllib3</td>
+        <td>CVE-2023-43804</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.26.5-1~exp1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3-werkzeug</td>
+        <td>CVE-2023-46136</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1+dfsg1-2+deb11u1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2021-29921</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2015-20107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2020-10735</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2021-3737</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2022-0391</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2022-42919</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2022-45061</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9</td>
+        <td>CVE-2023-6597</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2021-29921</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2015-20107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2020-10735</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2021-3737</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2022-0391</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2022-42919</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2022-45061</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python3.9-minimal</td>
+        <td>CVE-2023-6597</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.9.2-1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xdg-utils</td>
+        <td>CVE-2022-4055</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.3-4.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">zlib1g</td>
+        <td>CVE-2023-45853</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1:1.2.11.dfsg-2+deb11u2</td>
+        <td></td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>
