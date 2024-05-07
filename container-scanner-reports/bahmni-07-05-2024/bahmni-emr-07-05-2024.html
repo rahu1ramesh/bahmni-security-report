@@ -1,0 +1,3702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/bahmni-emr (centos 6.6)</title>
+  </head>
+  <body>
+    <h1>bahmni/bahmni-emr (centos 6.6)</h1>
+    <table>
+      <tr class="group-header"><th colspan="5">centos</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">apr</td>
+        <td>CVE-2017-12613</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.9-5.el6_2</td>
+        <td>1.3.9-5.el6_9.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2014-8500</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.30.rc1.el6_6.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2015-4620</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2015-5477</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2015-5722</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2015-8000</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-1285</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-1286</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-2776</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-2848</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-8864</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2016-9147</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2017-3137</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2017-3139</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2017-3143</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2017-3145</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2018-5740</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2018-5743</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2020-8616</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2020-8617</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2020-8625</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2021-25215</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.11</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2023-3341</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2023-4408</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2023-50387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-libs</td>
+        <td>CVE-2023-50868</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2014-8500</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.30.rc1.el6_6.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2015-4620</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2015-5477</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2015-5722</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2015-8000</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-1285</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-1286</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.37.rc1.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-2776</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-2848</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-8864</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2016-9147</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.47.rc1.el6_8.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2017-3137</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2017-3139</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2017-3143</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2017-3145</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.62.rc1.el6_9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2018-5740</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2018-5743</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2020-8616</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2020-8617</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2020-8625</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2021-25215</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td>32:9.8.2-0.68.rc1.el6_10.11</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2023-3341</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2023-4408</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2023-50387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">bind-utils</td>
+        <td>CVE-2023-50868</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">32:9.8.2-0.30.rc1.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">cyrus-sasl-lib</td>
+        <td>CVE-2022-24407</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.1.23-15.el6</td>
+        <td>2.1.23-16.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">dbus-glib</td>
+        <td>CVE-2013-0292</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">0.86-6.el6</td>
+        <td>0.86-6.el6_4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">dbus-libs</td>
+        <td>CVE-2019-12749</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:1.2.24-7.el6_3</td>
+        <td>1:1.2.24-11.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">expat</td>
+        <td>CVE-2022-25235</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.1-11.el6_2</td>
+        <td>2.0.1-14.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">expat</td>
+        <td>CVE-2022-25236</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.1-11.el6_2</td>
+        <td>2.0.1-14.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">expat</td>
+        <td>CVE-2022-25315</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.1-11.el6_2</td>
+        <td>2.0.1-14.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">expat</td>
+        <td>CVE-2022-40674</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.1-11.el6_2</td>
+        <td>2.0.1-15.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glib2</td>
+        <td>CVE-2021-27219</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.28.8-4.el6</td>
+        <td>2.28.8-11.el6_10</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2015-0235</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.149.el6_6.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2015-7547</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.166.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2017-1000366</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.209.el6_9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2024-33599</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2015-0235</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.149.el6_6.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2015-7547</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.166.el6_7.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2017-1000366</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td>2.12-1.209.el6_9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2024-33599</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-1.149.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">gnupg2</td>
+        <td>CVE-2018-12020</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.14-8.el6</td>
+        <td>2.0.14-9.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">gzip</td>
+        <td>CVE-2022-1271</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.12-22.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd</td>
+        <td>CVE-2016-5387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-54.el6_8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd</td>
+        <td>CVE-2017-9788</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-60.el6_9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd</td>
+        <td>CVE-2022-22720</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-70.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd-tools</td>
+        <td>CVE-2016-5387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-54.el6_8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd-tools</td>
+        <td>CVE-2017-9788</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-60.el6_9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">httpd-tools</td>
+        <td>CVE-2022-22720</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.2.15-54.el6.centos</td>
+        <td>2.2.15-70.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">krb5-libs</td>
+        <td>CVE-2022-42898</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.10.3-33.el6</td>
+        <td>1.10.3-66.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">less</td>
+        <td>CVE-2024-32487</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">436-13.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssh2</td>
+        <td>CVE-2019-3855</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.2-1.el6</td>
+        <td>1.4.2-3.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssh2</td>
+        <td>CVE-2019-3856</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.2-1.el6</td>
+        <td>1.4.2-3.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssh2</td>
+        <td>CVE-2019-3857</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.2-1.el6</td>
+        <td>1.4.2-3.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libssh2</td>
+        <td>CVE-2019-3863</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.2-1.el6</td>
+        <td>1.4.2-3.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libuser</td>
+        <td>CVE-2015-3246</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">0.56.13-5.el6</td>
+        <td>0.56.13-8.el6_7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libxml2</td>
+        <td>CVE-2016-1834</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.6-14.el6_5.2</td>
+        <td>2.7.6-21.el6_8.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libxml2</td>
+        <td>CVE-2016-1840</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.6-14.el6_5.2</td>
+        <td>2.7.6-21.el6_8.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mod_ssl</td>
+        <td>CVE-2016-5387</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:2.2.15-54.el6.centos</td>
+        <td>1:2.2.15-54.el6_8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mod_ssl</td>
+        <td>CVE-2017-9788</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:2.2.15-54.el6.centos</td>
+        <td>1:2.2.15-60.el6_9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mod_ssl</td>
+        <td>CVE-2022-22720</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:2.2.15-54.el6.centos</td>
+        <td>1:2.2.15-70.el6_10</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nspr</td>
+        <td>CVE-2015-7181</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">4.10.6-1.el6_5</td>
+        <td>4.10.8-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nspr</td>
+        <td>CVE-2015-7182</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">4.10.6-1.el6_5</td>
+        <td>4.10.8-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nspr</td>
+        <td>CVE-2015-7183</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">4.10.6-1.el6_5</td>
+        <td>4.10.8-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2015-7181</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2015-7182</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2015-7183</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2017-5461</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-1.el6_9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2021-43527</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-12.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2014-3566</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2017-7502</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-3.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2017-7805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-4.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2023-0767</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-13.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-softokn</td>
+        <td>CVE-2019-11745</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.14.3-17.el6</td>
+        <td>3.44.0-6.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-softokn-freebl</td>
+        <td>CVE-2019-11745</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.14.3-17.el6</td>
+        <td>3.44.0-6.el6_10</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2015-7181</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2015-7182</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2015-7183</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2017-5461</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-1.el6_9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2021-43527</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-12.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2014-3566</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2017-7502</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-3.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2017-7805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-4.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2023-0767</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-13.el6_10</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2015-7181</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2015-7182</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2015-7183</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2017-5461</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-1.el6_9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2021-43527</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-12.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2014-3566</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2017-7502</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-3.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2017-7805</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.28.4-4.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2023-0767</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.16.1-14.el6</td>
+        <td>3.44.0-13.el6_10</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-util</td>
+        <td>CVE-2015-7181</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-3.el6</td>
+        <td>3.19.1-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-util</td>
+        <td>CVE-2015-7182</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-3.el6</td>
+        <td>3.19.1-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-util</td>
+        <td>CVE-2015-7183</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-3.el6</td>
+        <td>3.19.1-2.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-util</td>
+        <td>CVE-2016-1950</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-3.el6</td>
+        <td>3.19.1-5.el6_7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">nss-util</td>
+        <td>CVE-2017-5461</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.16.1-3.el6</td>
+        <td>3.28.4-1.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openldap</td>
+        <td>CVE-2015-6908</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.4.39-8.el6</td>
+        <td>2.4.40-6.el6_7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssh</td>
+        <td>CVE-2023-38408</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3p1-118.1.el6_8</td>
+        <td>5.3p1-125.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssh-server</td>
+        <td>CVE-2023-38408</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3p1-118.1.el6_8</td>
+        <td>5.3p1-125.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2014-3513</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-30.el6_6.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2016-0800</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-42.el6_7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2016-2108</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-48.el6_8.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2016-6304</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-48.el6_8.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2020-1971</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-59.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2022-0778</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-60.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">openssl</td>
+        <td>CVE-2023-0286</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.0.1e-30.el6</td>
+        <td>1.0.1e-61.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4:5.10.1-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-Module-Pluggable</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:3.90-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-Pod-Escapes</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:1.04-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-Pod-Simple</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1:3.13-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-libs</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4:5.10.1-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">perl-version</td>
+        <td>CVE-2018-18311</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3:0.77-141.el6_7.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">policycoreutils</td>
+        <td>CVE-2014-3215</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.83-19.47.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">policycoreutils</td>
+        <td>CVE-2016-7545</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.0.83-19.47.el6</td>
+        <td>2.0.83-30.1.el6_8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">procps</td>
+        <td>CVE-2018-1124</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.8-30.el6</td>
+        <td>3.2.8-45.el6_9.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python</td>
+        <td>CVE-2019-9636</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-68.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-69.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python</td>
+        <td>CVE-2023-40217</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-70.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python-libs</td>
+        <td>CVE-2019-9636</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-68.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python-libs</td>
+        <td>CVE-2023-24329</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-69.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">python-libs</td>
+        <td>CVE-2023-40217</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.6.6-52.el6</td>
+        <td>2.6.6-70.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">rpm</td>
+        <td>CVE-2013-6435</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.8.0-37.el6</td>
+        <td>4.8.0-38.el6_6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">rpm-libs</td>
+        <td>CVE-2013-6435</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.8.0-37.el6</td>
+        <td>4.8.0-38.el6_6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">rpm-python</td>
+        <td>CVE-2013-6435</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.8.0-37.el6</td>
+        <td>4.8.0-38.el6_6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">rsync</td>
+        <td>CVE-2022-29154</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.0.6-12.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">rsyslog</td>
+        <td>CVE-2022-24903</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.8.10-10.el6_6</td>
+        <td>5.8.10-12.el6_10.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sudo</td>
+        <td>CVE-2017-1000367</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.6p3-24.el6</td>
+        <td>1.8.6p3-28.el6_9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sudo</td>
+        <td>CVE-2019-14287</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.6p3-24.el6</td>
+        <td>1.8.6p3-29.el6_10.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sudo</td>
+        <td>CVE-2019-18634</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.6p3-24.el6</td>
+        <td>1.8.6p3-29.el6_10.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sudo</td>
+        <td>CVE-2021-3156</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.6p3-24.el6</td>
+        <td>1.8.6p3-29.el6_10.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">sudo</td>
+        <td>CVE-2023-22809</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.8.6p3-24.el6</td>
+        <td>1.8.6p3-29.el6_10.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">vim-minimal</td>
+        <td>CVE-2019-12735</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2:7.2.411-1.8.el6</td>
+        <td>2:7.4.629-5.el6_10.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xz-libs</td>
+        <td>CVE-2022-1271</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.999.9-0.5.beta.20091007git.el6</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">yum-plugin-fastestmirror</td>
+        <td>CVE-2018-10897</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1.30-30.el6</td>
+        <td>1.1.30-42.el6_10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">zlib</td>
+        <td>CVE-2018-25032</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.3-29.el6</td>
+        <td>1.2.3-31.el6_10</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5">jar</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-15095</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.8.11, 2.9.4, 2.6.7.3, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-17485</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.4, 2.8.11, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-7525</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.6.7.1, 2.7.9.1, 2.8.9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-11307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14718</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14719</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-19362</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.8, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-7489</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.8.11.1, 2.9.5, 2.7.9.3, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14379</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14540</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16335</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16942</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16943</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17267</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10, 2.8.11.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17531</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-20330</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-8840</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9547</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9548</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-12022</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-5968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.8.11.1, 2.9.4, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-12086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.9, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14439</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14892</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.6.7.3, 2.8.11.5, 2.9.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10650</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10673</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.4, 2.6.7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24616</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24750</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.6.7.5, 2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35490</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35491</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35728</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36179</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36180</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36181</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36183</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36184</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36185</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36186</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36187</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36188</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36189</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36518</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.13.2.1, 2.12.6.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2021-20190</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.9.10.7, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42003</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.12.7.1, 2.13.4.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42004</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.1</td>
+        <td>2.12.7.1, 2.13.4</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-15095</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11, 2.9.4, 2.6.7.3, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-15095</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11, 2.9.4, 2.6.7.3, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-17485</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.4, 2.8.11, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-17485</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.4, 2.8.11, 2.7.9.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-7525</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.1, 2.7.9.1, 2.8.9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2017-7525</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.1, 2.7.9.1, 2.8.9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-11307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-11307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14718</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14718</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14719</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-14719</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.7, 2.8.11.3, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-19362</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.8, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-19362</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.8, 2.8.11.3, 2.7.9.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-7489</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11.1, 2.9.5, 2.7.9.3, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-7489</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11.1, 2.9.5, 2.7.9.3, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14379</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14379</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14540</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14540</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16335</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16335</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16942</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16942</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16943</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-16943</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17267</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17267</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10, 2.8.11.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17531</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-17531</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.1, 2.8.11.5, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-20330</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-20330</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-8840</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-8840</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9547</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9547</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9548</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-9548</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.8.11.6, 2.7.9.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-12022</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-12022</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.7.9.4, 2.8.11.2, 2.9.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-5968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11.1, 2.9.4, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2018-5968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.8.11.1, 2.9.4, 2.7.9.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-12086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-12086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14439</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14439</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.9.2, 2.8.11.4, 2.7.9.6, 2.6.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14892</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.3, 2.8.11.5, 2.9.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2019-14892</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.3, 2.8.11.5, 2.9.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10650</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10650</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10673</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.6.7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-10673</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.4, 2.6.7.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24616</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24616</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24750</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.5, 2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-24750</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.6.7.5, 2.9.10.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35490</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35490</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35491</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35491</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35728</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-35728</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36179</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36179</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36180</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36180</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36181</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36181</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36183</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36183</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36184</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36184</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36185</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36185</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36186</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36186</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36187</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36187</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36188</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36188</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36189</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36189</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.8, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36518</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.13.2.1, 2.12.6.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2020-36518</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.13.2.1, 2.12.6.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2021-20190</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.7, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2021-20190</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.9.10.7, 2.6.7.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42003</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.12.7.1, 2.13.4.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42003</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.12.7.1, 2.13.4.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42004</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.12.7.1, 2.13.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42004</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.5.4</td>
+        <td>2.12.7.1, 2.13.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.google.code.gson:gson</td>
+        <td>CVE-2022-25647</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.3.1</td>
+        <td>2.8.9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.google.code.gson:gson</td>
+        <td>CVE-2022-25647</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.3.1</td>
+        <td>2.8.9</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.itextpdf:itextpdf</td>
+        <td>CVE-2021-43113</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">5.5.0</td>
+        <td>5.5.13.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.itextpdf:itextpdf</td>
+        <td>CVE-2017-9096</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.5.0</td>
+        <td>5.5.12, 7.0.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2013-7285</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.7, 1.4.11</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2013-7285</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.7, 1.4.11</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2019-10173</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.11</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2019-10173</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.11</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2016-3674</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2016-3674</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2017-7957</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2017-7957</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.10</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2020-26217</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.14-jdk7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2020-26217</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.14-jdk7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2020-26258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.15</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2020-26258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.15</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-21341</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.16</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-21341</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.16</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-29505</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.17</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-29505</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.17</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39139</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39139</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39141</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39141</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39144</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39144</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39145</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39145</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39146</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39146</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39147</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39147</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39148</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39148</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39149</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39149</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39150</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39150</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39151</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39151</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39152</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39152</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39154</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-39154</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-43859</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.19</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2021-43859</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.19</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2022-40151</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2022-40151</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2022-41966</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.thoughtworks.xstream:xstream</td>
+        <td>CVE-2022-41966</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.3</td>
+        <td>1.4.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-beanutils:commons-beanutils</td>
+        <td>CVE-2019-10086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7.0</td>
+        <td>1.9.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-beanutils:commons-beanutils</td>
+        <td>CVE-2019-10086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7.0</td>
+        <td>1.9.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-beanutils:commons-beanutils</td>
+        <td>CVE-2019-10086</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7.0</td>
+        <td>1.9.4</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-1000031</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.3</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-1000031</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2013-2186</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2013-2186</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2014-0050</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2014-0050</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-3092</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-3092</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.3.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2023-24998</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2023-24998</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.1</td>
+        <td>1.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-1000031</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.3.1</td>
+        <td>1.3.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2016-3092</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.1</td>
+        <td>1.3.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">commons-fileupload:commons-fileupload</td>
+        <td>CVE-2023-24998</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.1</td>
+        <td>1.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2020-10683</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2020-10683</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2020-10683</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2018-1000632</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2018-1000632</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">dom4j:dom4j</td>
+        <td>CVE-2018-1000632</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2019-17571</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2019-17571</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2019-17571</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23305</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23305</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23305</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23307</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2021-4104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2021-4104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2021-4104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23302</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23302</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">log4j:log4j</td>
+        <td>CVE-2022-23302</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.2.15</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2017-3523</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.28</td>
+        <td>5.1.41</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2017-3523</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.28</td>
+        <td>5.1.41</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2018-3258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.28</td>
+        <td>8.0.13</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2018-3258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.28</td>
+        <td>8.0.13</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2017-3523</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.6</td>
+        <td>5.1.41</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">mysql:mysql-connector-java</td>
+        <td>CVE-2018-3258</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.1.6</td>
+        <td>8.0.13</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.httpcomponents:httpclient</td>
+        <td>CVE-2012-6153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.2</td>
+        <td>4.2.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.httpcomponents:httpclient</td>
+        <td>CVE-2012-6153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.2</td>
+        <td>4.2.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.poi:poi</td>
+        <td>CVE-2017-12626</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.12</td>
+        <td>3.17</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.poi:poi</td>
+        <td>CVE-2017-12626</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.12</td>
+        <td>3.17</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.poi:poi</td>
+        <td>CVE-2017-12626</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.12</td>
+        <td>3.17</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2012-6612</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>4.1.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2012-6612</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>4.1.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2017-3163</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>5.5.4, 6.4.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2017-3163</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>5.5.4, 6.4.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2017-3164</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>7.7.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2017-3164</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>7.7.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2018-1308</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>6.6.3, 7.3.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2018-1308</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>6.6.3, 7.3.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2019-0193</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>8.2.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2019-0193</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>8.2.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2019-12401</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>5.0.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2019-12401</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>5.0.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2021-29262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>8.8.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.solr:solr-core</td>
+        <td>CVE-2021-29262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.1.0</td>
+        <td>8.8.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2015-0899</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2015-0899</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2016-1181</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2016-1181</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2016-1182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.struts:struts-core</td>
+        <td>CVE-2016-1182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.3.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.velocity:velocity</td>
+        <td>CVE-2020-13936</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.velocity:velocity</td>
+        <td>CVE-2020-13936</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6.2</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.velocity:velocity</td>
+        <td>CVE-2020-13936</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.apache.xmlbeans:xmlbeans</td>
+        <td>CVE-2021-23926</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.3.0</td>
+        <td>3.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.apache.xmlbeans:xmlbeans</td>
+        <td>CVE-2021-23926</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.6.0</td>
+        <td>3.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.apache.xmlbeans:xmlbeans</td>
+        <td>CVE-2021-23926</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.6.0</td>
+        <td>3.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10202</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.9.13</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10202</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.9.13</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10172</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.13</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10172</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.13</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10202</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10172</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.jasypt:jasypt</td>
+        <td>CVE-2014-9970</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6</td>
+        <td>1.9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.jasypt:jasypt</td>
+        <td>CVE-2014-9970</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.6</td>
+        <td>1.9.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.jdom:jdom</td>
+        <td>CVE-2021-33813</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.jdom:jdom</td>
+        <td>CVE-2021-33813</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.1</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.liquibase:liquibase-core</td>
+        <td>CVE-2022-0839</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.0.5</td>
+        <td>4.8.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.liquibase:liquibase-core</td>
+        <td>CVE-2022-0839</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.0.5</td>
+        <td>4.8.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.liquibase:liquibase-core</td>
+        <td>CVE-2022-0839</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.0.5</td>
+        <td>4.8.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.quartz-scheduler:quartz</td>
+        <td>CVE-2019-13990</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.1.1</td>
+        <td>2.3.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.quartz-scheduler:quartz</td>
+        <td>CVE-2019-13990</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">2.1.1</td>
+        <td>2.3.2</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22970</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.22.RELEASE, 5.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22970</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.22.RELEASE, 5.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-beans</td>
+        <td>CVE-2022-22970</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.22.RELEASE, 5.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-context</td>
+        <td>CVE-2022-22968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.19, 5.2.21</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-context</td>
+        <td>CVE-2022-22968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.19, 5.2.21</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-context</td>
+        <td>CVE-2022-22968</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.19, 5.2.21</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1270</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.0.5, 4.3.16</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1270</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.0.5, 4.3.16</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1270</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.0.5, 4.3.16</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1275</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.16, 5.0.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1275</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.16, 5.0.5</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1275</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.16, 5.0.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2015-5211</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.2.2, 4.1.8, 3.2.15</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2015-5211</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.2.2, 4.1.8, 3.2.15</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2015-5211</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.2.2, 4.1.8, 3.2.15</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2016-5007</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2016-5007</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2016-5007</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1272</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.15, 5.0.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1272</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.15, 5.0.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-1272</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.3.15, 5.0.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-15756</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.1.1, 5.0.10, 4.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-15756</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.1.1, 5.0.10, 4.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-core</td>
+        <td>CVE-2018-15756</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.1.1, 5.0.10, 4.3.20</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-expression</td>
+        <td>CVE-2023-20863</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.8, 5.3.27, 5.2.24.RELEASE</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-expression</td>
+        <td>CVE-2023-20863</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.8, 5.3.27, 5.2.24.RELEASE</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-expression</td>
+        <td>CVE-2023-20863</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.8, 5.3.27, 5.2.24.RELEASE</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2016-1000027</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2016-1000027</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2016-1000027</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.0.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2022-22965</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>5.2.20.RELEASE, 5.3.18</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2014-0225</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.0.5, 3.2.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2014-0225</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.0.5, 3.2.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2014-0225</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>4.0.5, 3.2.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2016-9878</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>3.2.18, 4.2.9, 4.3.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2016-9878</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>3.2.18, 4.2.9, 4.3.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2016-9878</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.2.7.RELEASE</td>
+        <td>3.2.18, 4.2.9, 4.3.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xalan:xalan</td>
+        <td>CVE-2014-0107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.0</td>
+        <td>2.7.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xalan:xalan</td>
+        <td>CVE-2014-0107</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.0</td>
+        <td>2.7.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xalan:xalan</td>
+        <td>CVE-2022-34169</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.0</td>
+        <td>2.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xalan:xalan</td>
+        <td>CVE-2022-34169</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.7.0</td>
+        <td>2.7.3</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xerces:xercesImpl</td>
+        <td>CVE-2012-0881</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.8.0</td>
+        <td>2.12.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xerces:xercesImpl</td>
+        <td>CVE-2012-0881</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.8.0</td>
+        <td>2.12.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xerces:xercesImpl</td>
+        <td>CVE-2013-4002</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.8.0</td>
+        <td>2.12.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">xerces:xercesImpl</td>
+        <td>CVE-2013-4002</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.8.0</td>
+        <td>2.12.0</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5">node-pkg</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">angular</td>
+        <td>CVE-2019-10768</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.9</td>
+        <td>1.7.9</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">angular</td>
+        <td>CVE-2024-21490</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.9</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">crypto-js</td>
+        <td>CVE-2023-46233</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">3.1.5</td>
+        <td>4.2.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">jquery</td>
+        <td>NSWG-ECO-328</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.1</td>
+        <td>&gt;=3.0.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">jquery-ui</td>
+        <td>CVE-2016-7103</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.10.2</td>
+        <td>&gt;=1.12.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">lodash</td>
+        <td>CVE-2019-10744</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">4.3.0</td>
+        <td>4.17.12</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">lodash</td>
+        <td>CVE-2018-16487</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.3.0</td>
+        <td>&gt;=4.17.11</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">lodash</td>
+        <td>CVE-2020-8203</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.3.0</td>
+        <td>4.17.19</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">lodash</td>
+        <td>CVE-2021-23337</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">4.3.0</td>
+        <td>4.17.21</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5"></th></tr>
+      <tr><th colspan="5">No Vulnerabilities found</th></tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>

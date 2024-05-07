@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/reports (amazon 2 (Karoo))</title>
+  </head>
+  <body>
+    <h1>bahmni/reports (amazon 2 (Karoo))</h1>
+    <table>
+      <tr class="group-header"><th colspan="5">amazon</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">cpio</td>
+        <td>CVE-2015-1197</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.12-11.amzn2</td>
+        <td>2.12-11.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glib2</td>
+        <td>CVE-2020-35457</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.56.1-9.amzn2.0.6</td>
+        <td>2.56.1-9.amzn2.0.8</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glib2</td>
+        <td>CVE-2021-28153</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.56.1-9.amzn2.0.6</td>
+        <td>2.56.1-9.amzn2.0.7</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-common</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-langpack-en</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">glibc-minimal-langpack</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcrypt</td>
+        <td>CVE-2024-2961</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.26-63.amzn2.0.1</td>
+        <td>2.26-64.amzn2.0.1</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libnghttp2</td>
+        <td>CVE-2024-28182</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.41.0-1.amzn2.0.4</td>
+        <td>1.41.0-1.amzn2.0.5</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-sysinit</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">nss-tools</td>
+        <td>CVE-2023-7104</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">3.90.0-2.amzn2.0.1</td>
+        <td>3.90.0-2.amzn2.0.2</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5">jar</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42003</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.13.4.1</td>
+        <td>2.12.7.1, 2.13.4.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">com.fasterxml.jackson.core:jackson-databind</td>
+        <td>CVE-2022-42003</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.13.4.1</td>
+        <td>2.12.7.1, 2.13.4.2</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-25710</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-25710</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-26308</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-26308</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.velocity:velocity</td>
+        <td>CVE-2020-13936</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.velocity:velocity</td>
+        <td>CVE-2020-13936</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.7</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10202</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10202</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10172</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.codehaus.jackson:jackson-mapper-asl</td>
+        <td>CVE-2019-10172</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.9.8</td>
+        <td></td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2016-1000027</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.0.0</td>
+      </tr>
+      <tr class="severity-CRITICAL">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2016-1000027</td>
+        <td class="severity">CRITICAL</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.0.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">5.3.27</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>

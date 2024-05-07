@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      table {
+          width: 100%;
+          margin: 20px 0;
+          border-spacing: 2px;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #f2f2f2;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>bahmni/cdss-reference (ubuntu 22.04)</title>
+  </head>
+  <body>
+    <h1>bahmni/cdss-reference (ubuntu 22.04)</h1>
+    <table>
+      <tr class="group-header"><th colspan="5">ubuntu</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">curl</td>
+        <td>CVE-2023-38545</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.81.0-1ubuntu1.8</td>
+        <td>7.81.0-1ubuntu1.14</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libc-bin</td>
+        <td>CVE-2023-4911</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.35-0ubuntu3.1</td>
+        <td>2.35-0ubuntu3.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libc6</td>
+        <td>CVE-2023-4911</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.35-0ubuntu3.1</td>
+        <td>2.35-0ubuntu3.4</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">libcurl4</td>
+        <td>CVE-2023-38545</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">7.81.0-1ubuntu1.8</td>
+        <td>7.81.0-1ubuntu1.14</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">locales</td>
+        <td>CVE-2023-4911</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">2.35-0ubuntu3.1</td>
+        <td>2.35-0ubuntu3.4</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+      <tr class="group-header"><th colspan="5">jar</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">ch.qos.logback:logback-classic</td>
+        <td>CVE-2023-6378</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.11</td>
+        <td>1.3.12, 1.4.12, 1.2.13</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">ch.qos.logback:logback-core</td>
+        <td>CVE-2023-6378</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.4.11</td>
+        <td>1.3.12, 1.4.12, 1.2.13</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-25710</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.commons:commons-compress</td>
+        <td>CVE-2024-26308</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">1.21</td>
+        <td>1.26.0</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.apache.tomcat.embed:tomcat-embed-core</td>
+        <td>CVE-2023-46589</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">10.1.12</td>
+        <td>11.0.0-M11, 10.1.16, 9.0.83, 8.5.96</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22243</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">6.0.11</td>
+        <td>6.1.4, 6.0.17, 5.3.32</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22259</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">6.0.11</td>
+        <td>6.1.5, 6.0.18, 5.3.33</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-web</td>
+        <td>CVE-2024-22262</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">6.0.11</td>
+        <td>5.3.34, 6.0.19, 6.1.6</td>
+      </tr>
+      <tr class="severity-HIGH">
+        <td class="pkg-name">org.springframework:spring-webmvc</td>
+        <td>CVE-2023-34053</td>
+        <td class="severity">HIGH</td>
+        <td class="pkg-version">6.0.11</td>
+        <td>6.0.14</td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>
