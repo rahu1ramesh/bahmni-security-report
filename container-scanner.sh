@@ -28,8 +28,8 @@ fi
 echo "Retrieving repository list ..."
 REPO_LIST=$(curl -s "https://hub.docker.com/v2/repositories/${ORG}/?page_size=100" | jq -r '.results|.[]|.name')
 
-# Get Today's Date
-TODAY_DATE=$(date --date "+%d-%m-%Y")
+# Get today's date in the desired format for folder naming
+TODAY_DATE=$(date +'%d-%m-%Y')
 # Define the root and sub directory name
 ROOT_DIR="container-scanner-reports"
 DIR="bahmni-${TODAY_DATE}"

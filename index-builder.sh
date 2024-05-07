@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Get Today's Date
-TODAY_DATE=$(date --date "+%d-%m-%Y")
+# Get today's date in the desired format for folder naming
+TODAY_DATE=$(date +'%d-%m-%Y')
+
 # Define the directory to read files from
 DIR="container-scanner-reports/bahmni-${TODAY_DATE}"
 
 # Define the output HTML file
-OUTPUT_FILE="container-scanner-reports/index.html"
+OUTPUT_FILE="container-scanner-reports/bahmni-${TODAY_DATE}/index.html"
 
 # Define CSS styles for the table
 CSS_STYLES=$(cat <<'EOF'
@@ -66,9 +67,9 @@ for file in "$DIR"/*; do
     # Get the base name of the file (without the directory path)
     base_name=$(basename "$file")
     
-    # Add a table row with the file name
+    # Add a table row with the file name as a clickable link
     echo "        <tr>
-            <td><a href="bahmni-${TODAY_DATE}/$base_name">$base_name/</a></td>
+            <td><a href=\"$base_name\">$base_name</a></td>
         </tr>" >> "$OUTPUT_FILE"
 done
 
@@ -77,5 +78,5 @@ echo "    </table>
 </body>
 </html>" >> "$OUTPUT_FILE"
 
-# Output the file creation success message
+# Output the success message
 echo "HTML file '$OUTPUT_FILE' created successfully."
