@@ -17,21 +17,43 @@ jobs:
         run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
       - name: Get Scanner Script and Template File
         run: |
-          curl -o container-scanner.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/container-scanner.sh
-          chmod +x container-scanner.sh
+          curl -o image-scanner.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/image-scanner.sh
+          chmod +x image-scanner.sh
           curl -o html.tpl https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/html.tpl
       - name: Scan Images In Bahmni Namespace
         run: |
-          ./container-scanner.sh
+          ./image-scanner.sh
+      - name: Upload Report Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: image-scan-summary
+          path: container-scanner-reports/bahmni-${{ steps.date.outputs.date }}
+
+  save-scan-summary:
+    name: Save Scan Summary
+    needs: scan-containers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout security-private repo
+        uses: actions/checkout@v3
+        with:
+          repository: rahu1ramesh/security-reports
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+      - name: Download Cluster Summary
+        uses: actions/download-artifact@v3
+        with:
+          name: image-scan-summary
       - name: Commit and push changes
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[Bahmni Infra] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
+          commit_message: "[Rahul] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
           create_branch: true
-          branch: report-test
+          branch: report-${{ steps.date.outputs.date }}
           file_pattern: '*.html'
           repository: .
-          commit_user_name: Bahmni Infra
-          commit_user_email: infrastructure@bahmni.org
-          commit_author: bahmni-infra <infrastructure@bahmni.org>
+          commit_user_name: Rahul Ramesh
+          commit_user_email: rahul.ramesh@thoughtworks.com
+          commit_author: rahu1ramesh <rahul.ramesh@thoughtworks.com>
