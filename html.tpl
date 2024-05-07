@@ -124,7 +124,7 @@
       </tr>
         {{- end }}
       {{- end }}
-      {{- if (eq (len .Misconfigurations) 0) }}
+      {{- if (eq (len .Misconfigurations ) 0) }}
       <tr><th colspan="6">No Misconfigurations found</th></tr>
       {{- else }}
       <tr class="sub-header">

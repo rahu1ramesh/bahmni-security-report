@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Get Today's Date
+TODAY_DATE=$(date --date "+%d-%m-%Y")
 # Define the directory to read files from
-DIR="container-scanner-reports/bahmni-latest"
+DIR="container-scanner-reports/bahmni-${TODAY_DATE}"
 
 # Define the output HTML file
 OUTPUT_FILE="container-scanner-reports/index.html"
@@ -66,7 +68,7 @@ for file in "$DIR"/*; do
     
     # Add a table row with the file name
     echo "        <tr>
-            <td><a href="bahmni-latest/$base_name">$base_name/</a></td>
+            <td><a href="bahmni-${TODAY_DATE}/$base_name">$base_name/</a></td>
         </tr>" >> "$OUTPUT_FILE"
 done
 

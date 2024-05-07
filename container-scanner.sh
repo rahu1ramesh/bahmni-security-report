@@ -28,9 +28,11 @@ fi
 echo "Retrieving repository list ..."
 REPO_LIST=$(curl -s "https://hub.docker.com/v2/repositories/${ORG}/?page_size=100" | jq -r '.results|.[]|.name')
 
+# Get Today's Date
+TODAY_DATE=$(date --date "+%d-%m-%Y")
 # Define the root and sub directory name
 ROOT_DIR="container-scanner-reports"
-DIR="bahmni-latest"
+DIR="bahmni-${TODAY_DATE}"
 
 # Check if the root directory exists and create it if not
 if [ ! -d "$ROOT_DIR" ]; then
@@ -67,7 +69,7 @@ for image in $REPO_LIST; do
 
     # Run Trivy scan on the image
     echo "Scanning image: $image"
-    output_file_txt="$ROOT_DIR/${DIR}/${image}-latest.html"
+    output_file_txt="$ROOT_DIR/${DIR}/${image}-${TODAY_DATE}.html"
     trivy image --severity HIGH,CRITICAL --format template --template "@html.tpl" --output "$output_file_txt" "${ORG}/$image_name"
     echo "" >> "$output_file_txt"
 
