@@ -52,8 +52,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Rahul] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
-          create_branch: true
-          branch: report-${{ steps.date.outputs.date }}
           file_pattern: '*.html'
           repository: .
           commit_user_name: Rahul Ramesh
