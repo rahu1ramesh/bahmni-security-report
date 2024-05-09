@@ -26,17 +26,12 @@ jobs:
       - name: Scan Images In Bahmni Namespace
         run: |
           ./image-scanner.sh bahmni
-      - name: Upload Report Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: image-scan-summary
-          path: container-scanner-reports/bahmni-${{ steps.date.outputs.date }}
       - name: Commit and push changes
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Rahul] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
-          file_pattern: 'image-scan-report/${{ steps.date.outputs.date }}/*.html'
+          file_pattern: 'image-scan-reports/${{ steps.date.outputs.date }}/*.html'
           repository: .
           commit_user_name: Rahul Ramesh
           commit_user_email: rahul.ramesh@thoughtworks.com
