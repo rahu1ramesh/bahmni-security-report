@@ -25,7 +25,7 @@ jobs:
           curl -o html.tpl https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/BAH-3800/html.tpl
       - name: Scan Images In Bahmni Namespace
         run: |
-          ./image-scanner.sh
+          ./image-scanner.sh Bahmni
       - name: Upload Report Artifact
         uses: actions/upload-artifact@v3
         with:
