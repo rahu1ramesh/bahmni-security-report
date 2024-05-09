@@ -31,7 +31,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Rahul] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
-          file_pattern: 'image-scan-reports/${{ steps.date.outputs.date }}/*.html'
+          file_pattern: '*.html'
           repository: .
           commit_user_name: Rahul Ramesh
           commit_user_email: rahul.ramesh@thoughtworks.com
