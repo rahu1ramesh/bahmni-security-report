@@ -4,14 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  scan-containers:
+  scan-images:
     name: Scan Images In Bahmni Namespace
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout security-private repo
+        uses: actions/checkout@v3
+        with:
+          repository: rahu1ramesh/security-reports
+          token: ${{ secrets.GHA_TOKEN }}
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
@@ -28,31 +31,12 @@ jobs:
         with:
           name: image-scan-summary
           path: container-scanner-reports/bahmni-${{ steps.date.outputs.date }}
-
-  save-scan-summary:
-    name: Save Scan Summary
-    needs: scan-containers
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout security-private repo
-        uses: actions/checkout@v3
-        with:
-          repository: rahu1ramesh/security-reports
-          token: ${{ secrets.GHA_TOKEN }}
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
-      - name: Download Cluster Summary
-        uses: actions/download-artifact@v3
-        with:
-          name: image-scan-summary
-          path: ${{ steps.date.outputs.date }}
       - name: Commit and push changes
         id: auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Rahul] | Add. Image Scan Report ${{ steps.date.outputs.date }}"
-          file_pattern: '*.html'
+          file_pattern: 'image-scan-report/${{ steps.date.outputs.date }}/*.html'
           repository: .
           commit_user_name: Rahul Ramesh
           commit_user_email: rahul.ramesh@thoughtworks.com
